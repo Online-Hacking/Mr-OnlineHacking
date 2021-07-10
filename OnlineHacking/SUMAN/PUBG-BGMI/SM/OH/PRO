@@ -52,6 +52,7 @@ apt install gem -y
 gem install lolcat
 apt install gnome-terminal -y
 clear
+rm -rf SUMAN
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip --no-check-certificate
 unzip ngrok-stable-linux-arm.zip
 wget https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SUMAN-PUBG.rar
