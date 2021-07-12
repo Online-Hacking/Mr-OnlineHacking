@@ -90,14 +90,8 @@ echo
 echo -e "\e[92m[+] To run the tool type :\e[93m ./OnlineHacking-Phishing \e[m "
 echo 
 
-
-
 fi
 
-echo 
-echo -e "\e[1m \e[36m[+] Invalid Activation Key Try Again !! \e[m \e[21"
-echo 
-echo 
 sleep 10
 echo 
 exit
