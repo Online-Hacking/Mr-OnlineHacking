@@ -210,4 +210,5 @@ echo
 fi
 sleep 3
 echo
+rm -rf Android-Setup.sh
 exit
