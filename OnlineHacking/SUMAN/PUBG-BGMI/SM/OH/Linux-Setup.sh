@@ -209,4 +209,5 @@ echo
 fi
 sleep 3
 echo
+rm -rf Linux-Setup.sh
 exit
