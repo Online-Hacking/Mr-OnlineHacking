@@ -120,14 +120,14 @@ echo " "
 echo -e "\e[1;96m========================================================= > > >\e[m "
 echo ""
 echo ""
-read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m You Want to Choose Ngrok Version : \e[1;91m (default:1) : \e[0m' option
+read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m You Want to Choose Ngrok Version : \e[1;91m (default:2) : \e[0m' option
 echo""
 echo""
 echo""
-if [[ $option == *'2'* ]]; then
+if [[ $option == *'1'* ]]; then
 wget https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok
 fi
-if [[ $option == *'1'* ]]; then
+if [[ $option == *'2'* ]]; then
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip --no-check-certificate
 unzip ngrok-stable-linux-amd64.zip
 rm -rf unzip ngrok-stable-linux-amd64.zip
