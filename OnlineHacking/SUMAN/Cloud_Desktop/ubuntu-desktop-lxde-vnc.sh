@@ -41,6 +41,7 @@ echo ""
 			   echo -e
                            read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Stop Server \e[1;91m (Y/N) : \e[0m' option
                            echo""
+			   rm -rf RDP/ubuntu-desktop-lxde-vnc.sh
                            echo""
 			   if [[ $option == *'Y'* ]]; then
                            exit
