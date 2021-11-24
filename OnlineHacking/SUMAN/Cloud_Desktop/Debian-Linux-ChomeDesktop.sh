@@ -34,4 +34,5 @@
 			   echo -e
 			   echo -e "\e[96m=====================================================================\e[92m"
                            echo ""
+			   rm -rf RDP/Debian-Linux-ChomeDesktop.sh
          echo ""
