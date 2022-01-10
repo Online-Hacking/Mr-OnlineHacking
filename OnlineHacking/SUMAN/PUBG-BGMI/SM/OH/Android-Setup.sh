@@ -185,7 +185,7 @@ sleep 4
 echo
 echo -e "\e[1m \e[36m[+] This is Last Step \e[m \e[21"
 echo
-rm -rf SUMAN SUMAN1 PUBG-BGMI_Phishing
+rm -rf SUMAN SUMAN1 
 echo
 echo -e "\e[92m[+] Open New type this command:\e[93m PUBG-BGMI_Phishing \e[m "
 echo
