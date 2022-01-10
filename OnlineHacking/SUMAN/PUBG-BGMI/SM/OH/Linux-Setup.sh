@@ -125,7 +125,7 @@ echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!          DOWNLOAD 
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-PUBG.rar -O SUMAN-PUBG.rar
-wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-BGMI.rar -O SUMAN-PUBG.rar
+wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-BGMI.rar -O SUMAN-BGMI.rar
 unrar x -Password SUMAN-PUBG.rar
 unrar x -Password SUMAN-BGMI.rar
 rm -rf SUMAN-PUBG.rar SUMAN-BGMI.rar
