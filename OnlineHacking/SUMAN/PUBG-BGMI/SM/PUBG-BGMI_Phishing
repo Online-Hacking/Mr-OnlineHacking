@@ -30,7 +30,7 @@ kill -9 $php
 kill -9 $ngrok
 kill -9 $cloudflared
 clear
-cd /data/data/com.termux/files/usr/bin/OnlineHacking/
+cd /usr/bin/OnlineHacking/
 bash Logo.sh
 bash Logo2.sh
 echo ""
