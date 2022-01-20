@@ -83,7 +83,7 @@ read -p $' \e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Enter Activation Key : \e[0m' opt
 echo""
 echo""
 echo""
-if [[ $option == *''* ]]; then
+if [[ $option == *'abcb98b478c48267755a4b99d95a'* ]]; then
 clear
 echo ""
 echo ""
