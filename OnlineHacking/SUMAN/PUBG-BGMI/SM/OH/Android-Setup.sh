@@ -52,6 +52,9 @@ if [[ $option == *'n'* ]]; then
 clear
 exit
 fi
+echo ""
+termux-open-url https://www.onlinehacking.xyz/2021/07/PUBG-BGMI-Phishing-Hack-Termux.html
+echo ""
 clear
 echo ""
 echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The PUBG BGMI Phishing Tool Please Wait....  \e[0m"
