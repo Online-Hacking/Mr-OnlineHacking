@@ -21,6 +21,12 @@ echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 4 :\e[0m\e[1;36m Install Ngrok  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 5 :\e[0m\e[1;36m Download Tool File  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 6 :\e[0m\e[1;36m Enter The Ngrok Token  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 7 :\e[0m\e[1;36m Start Phishing  "
+echo ""
+rm -rf /data/data/com.termux/files/usr/bin/SUMAN
+rm -rf /data/data/com.termux/files/usr/bin/OnlineHacking
+rm -rf /data/data/com.termux/files/usr/bin/FreeFire-Phishing
+rm -rf /data/data/com.termux/files/usr/bin/ngrok
+rm -rf /data/data/com.termux/files/usr/bin/cloudflared
 sleep 5
 clear
 echo ""
