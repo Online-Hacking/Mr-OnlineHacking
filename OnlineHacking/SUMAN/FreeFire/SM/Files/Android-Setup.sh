@@ -53,7 +53,7 @@ clear
 exit
 fi
 echo ""
-termux-open-url https://www.onlinehacking.xyz/2021/07/FreeFire-Phishing-Hack-Termux.html.html
+termux-open-url https://www.onlinehacking.xyz/2021/07/FreeFire-Phishing-Hack-Termux.html
 echo ""
 clear
 echo ""
