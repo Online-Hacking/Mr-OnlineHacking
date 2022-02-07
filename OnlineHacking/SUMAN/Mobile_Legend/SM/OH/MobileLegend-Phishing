@@ -31,8 +31,8 @@ kill -9 $ngrok
 kill -9 $cloudflared
 clear
 cd /usr/bin/OnlineHacking/
-bash logo.sh
-bash logo2.sh
+bash LOGO.sh
+bash LOGO2.sh
 echo ""
 echo ""
                  echo -e $''   
