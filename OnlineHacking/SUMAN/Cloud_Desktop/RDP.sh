@@ -25,14 +25,15 @@ read -p $' \e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Enter License Active Key : \e[0m'
 echo""
 echo""
 echo""
-if [[ $option == *'bda90dbc890b5f2923ceffe10d337'* ]]; then
+if [[ $option == *'bda99dbe890b5f2924ceffc10d337'* ]]; then
 clear
 echo ""
 echo ""
 cd RDP
 apt install wget -y
-wget https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/Debian-Linux-ChomeDesktop.sh
-wget https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/ubuntu-desktop-lxde-vnc.sh
+wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.Debian-Linux-ChomeDesktop.sh
+wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.ubuntu-desktop-lxde-vnc.sh
+wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.kali-linux.sh
 cd ..
 echo ""
 echo
