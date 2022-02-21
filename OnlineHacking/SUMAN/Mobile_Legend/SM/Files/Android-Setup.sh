@@ -29,7 +29,7 @@ rm -rf /data/data/com.termux/files/usr/bin/OnlineHacking/LOGO.sh
 rm -rf /data/data/com.termux/files/usr/bin/OnlineHacking/LOGO2.sh
 rm -rf /data/data/com.termux/files/usr/bin/MobileLegend-Phishing
 rm -rf /data/data/com.termux/files/usr/bin/ngrok
-rm -rf /data/data/com.termux/files/usr/bin/cloudflared
+rm -rf /data/data/com.termux/files/usr/bin/cloudflared-linux-arm
 sleep 5
 clear
 echo ""
