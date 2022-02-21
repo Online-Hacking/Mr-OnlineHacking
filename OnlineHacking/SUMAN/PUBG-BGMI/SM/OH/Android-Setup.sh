@@ -150,7 +150,6 @@ echo ""
 read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
 $token
 echo ""
-sleep1
 echo
 cp -R cloudflared-linux-386 ngrok SUMAN/X-Suit/
 cp -R cloudflared-linux-386 ngrok SUMAN/Avalanche-X-Suit-LuckySpin/
