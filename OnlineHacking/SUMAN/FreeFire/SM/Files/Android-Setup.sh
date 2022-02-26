@@ -32,7 +32,7 @@ rm -rf /data/data/com.termux/files/usr/bin/OnlineHacking/logo.sh
 rm -rf /data/data/com.termux/files/usr/bin/OnlineHacking/logo2.sh
 rm -rf /data/data/com.termux/files/usr/bin/FreeFire-Phishing
 rm -rf /data/data/com.termux/files/usr/bin/ngrok
-rm -rf /data/data/com.termux/files/usr/bin/cloudflared-linux-arm
+rm -rf /data/data/com.termux/files/usr/bin/cloudflared-linux-arm64
 sleep 5
 clear
 echo ""
