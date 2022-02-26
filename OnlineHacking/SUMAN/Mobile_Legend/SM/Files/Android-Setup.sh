@@ -166,7 +166,7 @@ clear
 echo
 echo
 cp -R ngrok /data/data/com.termux/files/usr/bin
-cp -R cloudflared-linux-arm /data/data/com.termux/files/usr/bin
+cp -R cloudflared-linux-arm64 /data/data/com.termux/files/usr/bin
 cp -R .SUMAN /data/data/com.termux/files/usr/bin
 cp -R ML /data/data/com.termux/files/usr/bin
 cp -R MobileLegend /data/data/com.termux/files/usr/bin
