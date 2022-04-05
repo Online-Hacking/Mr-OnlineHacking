@@ -173,6 +173,7 @@ cp -R PUBG /data/data/com.termux/files/usr/bin
 cp -R BGMI /data/data/com.termux/files/usr/bin
 cp -R PUBG-BGMI_Phishing /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
+cp -R links /data/data/com.termux/files/usr/bin
 echo
 rm -rf SUMAN SUMAN1 
 echo
