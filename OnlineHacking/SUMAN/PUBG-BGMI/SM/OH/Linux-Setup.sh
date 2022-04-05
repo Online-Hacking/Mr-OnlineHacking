@@ -173,6 +173,7 @@ cp -R PUBG /usr/bin/
 cp -R BGMI /usr/bin/
 cp -R PUBG-BGMI_Phishing /usr/bin/
 cp -R OnlineHacking /usr/bin/
+cp -R links /usr/bin/
 echo
 rm -rf SUMAN SUMAN1
 echo
