@@ -51,14 +51,6 @@ echo -e "\e[92m
   
   }
   
- 
-
-
-download() {
-echo "\e[95m
-
-\e[m"
-}
 
 
 
