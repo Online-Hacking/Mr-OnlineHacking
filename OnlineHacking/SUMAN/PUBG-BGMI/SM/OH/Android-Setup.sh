@@ -195,7 +195,18 @@ chmod +x PUBG
 chmod +x BGMI
 clear
 
-sleep 1
+echo ""
+echo -e "\e[93m 
+ ███▄    █   ▄████  ██▀███   ▒█████   ██ ▄█▀
+ ██ ▀█   █  ██▒ ▀█▒▓██ ▒ ██▒▒██▒  ██▒ ██▄█▒ 
+▓██  ▀█ ██▒▒██░▄▄▄░▓██ ░▄█ ▒▒██░  ██▒▓███▄░ 
+▓██▒  ▐▌██▒░▓█  ██▓▒██▀▀█▄  ▒██   ██░▓██ █▄ 
+▒██░   ▓██░░▒▓███▀▒░██▓ ▒██▒░ ████▓▒░▒██▒ █▄
+░ ▒░   ▒ ▒  ░▒   ▒ ░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒ ▒▒ ▓▒
+░ ░░   ░ ▒░  ░   ░   ░▒ ░ ▒░  ░ ▒ ▒░ ░ ░▒ ▒░
+   ░   ░ ░ ░ ░   ░   ░░   ░ ░ ░ ░ ▒  ░ ░░ ░ 
+         ░       ░    ░         ░ ░  ░  ░   
+\e[0m\n"
 echo ""
 echo ""
 read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Want to give \e[96mNgrok \e[32mToken ? \e[1;91m (y/n) : \e[0m' option
@@ -218,11 +229,9 @@ echo ""
 read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
 $token
 echo ""
-exit
 fi
 if [[ $option == *'n'* ]]; then
 clear
-exit
 fi
 
 echo
