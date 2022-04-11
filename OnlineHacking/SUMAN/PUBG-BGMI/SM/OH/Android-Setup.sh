@@ -27,7 +27,6 @@ echo -e "\e[33m
  ░    ░ ░ ░   ░ ░      ░    ▒ ░   
  ░            ░        ░    ░     
       ░                           
-
   \e[0m\n"
 }
 
@@ -185,7 +184,6 @@ echo""
 clear
 echo ""
 logo
-echo ""
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;96m  !!          DOWNLOAD TOOL FILE          !!\e[0m'
