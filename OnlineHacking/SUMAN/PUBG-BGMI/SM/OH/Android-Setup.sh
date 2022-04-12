@@ -260,7 +260,7 @@ echo
 echo
 logo
 echo
-echo ""echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server......  \e[m "
+echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server......  \e[m "
 sleep 7
 echo
 echo
@@ -278,7 +278,7 @@ echo
 echo -e "\e[92m[+] New type this command to start :\e[93m PUBG-BGMI_Phishing \e[m "
 echo
 fi
+rm -rf Android-Setup.sh
 sleep 3
 echo
-rm -rf Android-Setup.sh
 exit
