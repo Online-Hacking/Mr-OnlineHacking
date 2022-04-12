@@ -180,7 +180,6 @@ echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   --------------------
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;96m  !!          DOWNLOAD TOOL FILE          !!\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
-rm -rf .SUMAN
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-PUBG.rar -O SUMAN-PUBG.rar
 echo ""
 wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/PUBG-BGMI/SM/newsite/SUMAN-BGMI.rar -O SUMAN-BGMI.rar
@@ -260,7 +259,7 @@ echo
 logo
 echo
 echo -e "\e[35m[+] Connect Online Hacking PUBG BGMI Hacking Server (CyberPlane)......  \e[m "
-sleep 7
+sleep 5
 echo
 echo
 clear
