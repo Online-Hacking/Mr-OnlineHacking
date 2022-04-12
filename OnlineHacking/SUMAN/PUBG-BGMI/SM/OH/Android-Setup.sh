@@ -104,7 +104,7 @@ clear
 exit
 fi
 echo ""
-termux-open-url https://www.onlinehacking.xyz/2021/07/PUBG-BGMI-Phishing-Hack-Termux.html
+termux-open-url https://www.onlinehacking.in/pubg-bgmi-mobile-account-hack-phishing-tool-with-termux
 echo ""
 clear
 echo ""
