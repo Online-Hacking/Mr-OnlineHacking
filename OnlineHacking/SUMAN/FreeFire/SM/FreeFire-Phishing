@@ -478,6 +478,7 @@ elif [ $option = 50 ] || [ $option = 050 ]
 	          then
 
                            echo ""
+			   l_logo
 			   echo ""
 	         
 
