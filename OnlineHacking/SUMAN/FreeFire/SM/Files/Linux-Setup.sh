@@ -136,10 +136,8 @@ sudo apt install curl -y
 sudo apt install unrar -y
 systemctl start apache2
 sudo apt install ruby -y
-sudo apt-get install ruby -y
 sudo apt install gem -y
 gem install lolcat
-apt install gnome-terminal -y
 sudo apt install wget -y
 clear
 echo""
