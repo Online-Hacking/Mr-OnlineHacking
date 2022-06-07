@@ -87,7 +87,7 @@ read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Click Enter to continue : \e[0m' o
 echo""
 echo""
 echo ""
-termux-open-url https://www.onlinehacking.in/
+termux-open-url https://www.onlinehacking.in/free-fire-account-hack-phishing-tool-with-termux
 echo ""
 clear
 echo ""
