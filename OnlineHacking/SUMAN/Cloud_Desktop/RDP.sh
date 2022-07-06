@@ -30,7 +30,7 @@ clear
 echo ""
 echo ""
 cd RDP
-apt install wget -y
+sudo apt install wget -y
 wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.Debian-Linux-ChomeDesktop.sh > /dev/null 2>&1
 wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.ubuntu-desktop-lxde-vnc.sh > /dev/null 2>&1
 wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.kali-linux.sh > /dev/null 2>&1
