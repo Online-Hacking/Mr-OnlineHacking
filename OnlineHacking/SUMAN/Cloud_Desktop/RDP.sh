@@ -35,6 +35,8 @@ wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-Onli
 wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.ubuntu-desktop-lxde-vnc.sh
 wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.kali-linux.sh
 cd ..
+cd Docker-Ubuntu
+1
 echo ""
 echo
 fi
