@@ -31,13 +31,19 @@ echo ""
 echo ""
 cd RDP
 apt install wget -y
-wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.Debian-Linux-ChomeDesktop.sh
-wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.ubuntu-desktop-lxde-vnc.sh
-wget -q --show-progress https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.kali-linux.sh
+wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.Debian-Linux-ChomeDesktop.sh > /dev/null 2>&1
+wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.ubuntu-desktop-lxde-vnc.sh > /dev/null 2>&1
+wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.kali-linux.sh > /dev/null 2>&1
 cd ..
 cd Docker-Ubuntu
-1
+wget -q https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/Cloud_Desktop/Docker-Ubuntu/.nomachine-mate.sh > /dev/null 2>&1
+wget -q https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/Cloud_Desktop/Docker-Ubuntu/.nomachine-windows10.sh > /dev/null 2>&1
+wget -q https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/Cloud_Desktop/Docker-Ubuntu/.nomachine-wine.sh > /dev/null 2>&1
+wget -q https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/Cloud_Desktop/Docker-Ubuntu/.nomachine-xfce4.sh > /dev/null 2>&1
+wget -q https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/Cloud_Desktop/Docker-Ubuntu/.nomachine-kalilinux.sh > /dev/null 2>&1
+cd ..
 echo ""
+clear
 echo
 fi
 sleep 3
