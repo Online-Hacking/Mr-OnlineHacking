@@ -46,6 +46,6 @@ echo ""
 clear
 echo
 fi
-sleep 3
+sleep 1
 echo
 exit
