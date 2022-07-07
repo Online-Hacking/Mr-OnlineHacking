@@ -1,4 +1,5 @@
 echo -e "$123\n$123\n" | sudo passwd
+clear
 rm -rf ngrok  ngrok.zip  ng.sh > /dev/null 2>&1
 echo -e "\e[92m 
          ██████╗ ███╗   ██╗██╗     ██╗███╗   ██╗███████╗    
