@@ -93,7 +93,7 @@ echo ""
 echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Onine Hacking \e[0m"
 echo ""
 sleep 1
-docker run --rm -d --network host --privileged --name nomachine-xfce4 -e PASSWORD=suman -e USER=OnlineHacking --cap-add=SYS_PTRACE --shm-size=1g BY https:onlinehacking.in
+docker run --rm -d --network host --privileged --name nomachine-xfce4 -e PASSWORD=suman -e USER=OnlineHacking --cap-add=SYS_PTRACE --shm-size=1g thuonghai2711/nomachine-ubuntu-desktop:windows10
 clear
 echo -e "\e[92m 
          ██████╗ ███╗   ██╗██╗     ██╗███╗   ██╗███████╗    
