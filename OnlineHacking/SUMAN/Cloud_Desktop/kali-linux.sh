@@ -108,6 +108,7 @@ echo ""
 echo -----------------------------------------------------------------
 echo ""
 printf "\e[31m[\e[32m★\e[31m]\e[92m Open Remote Desktop App (Android/Windows). Enter RDP Address and Username to Connect RDP \e[m "
+echo " "
 echo ""
 echo -e "\e[93m RDP Address:\e[97m" 
   curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' 
