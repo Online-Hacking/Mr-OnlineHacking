@@ -16,9 +16,9 @@ echo -e "\e[33m
 ╚═╝  ╚═╝╚══════╝   ╚═╝    \e[0m\n"
 echo ""
 echo ""
-echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Visit This Shot Link and Generator License Key (free) \e[0m"
+echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Visit This Website Scroll Down and Generator License Key (free) \e[0m"
 echo ""
-echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Link :\e[0m\e[1;36m https://bit.ly/Cloud-RDP-License  "
+echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Link :\e[0m\e[1;36m http://tinyurl.com/RDP-Linux-Key  "
 echo ""
 echo ""
 read -p $' \e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Enter License Active Key : \e[0m' option
