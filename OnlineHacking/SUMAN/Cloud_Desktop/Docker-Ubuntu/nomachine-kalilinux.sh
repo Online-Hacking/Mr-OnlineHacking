@@ -114,7 +114,7 @@ sleep 1
 echo -e "\e[96mWebsite : \e[93mhttps://www.onlinehacking.in/ \e[0m"
 echo -----------------------------------------------------------------
 echo ""
-printf "\e[31m[\e[32m★\e[31m]\e[92m Download NoMachine VNC Application and Software and Connect this RDP. Enter IP Address ans Port and Click Connect RDP \e[97m"
+printf "\e[31m[\e[32m★\e[31m]\e[92m Download NoMachine VNC Application and Software and Connect this RDP. Enter IP Address ans Port and Click Connect RDP "
 echo ""
 echo -e "\e[93m IP Address:\e[97m" 
   curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' 
