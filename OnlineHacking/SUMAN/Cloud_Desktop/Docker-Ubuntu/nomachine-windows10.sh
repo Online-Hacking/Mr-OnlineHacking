@@ -84,10 +84,10 @@ if curl --silent --show-error http://127.0.0.1:4040/api/tunnels  > /dev/null 2>&
 sleep 1
 clear
 echo ""
-echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The Download Cloud Linux RDP Tool Kali Linux XFCE4 Desktop Environmen \e[0m"
+echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The Download Cloud Linux RDP Tool Debian - Windows 10 Theme Desktop Environmen \e[0m"
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   -----------------------------------------------  \e[1;91m\e[0m'
-echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;93m  !!          Download Kali Linux XFCE4          !!\e[0m'
+echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;93m  !!      Download Ubuntu Windows 10 Theme        !!\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ------------------------------------------------ \e[1;91m\e[0m'
 echo ""
 echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Onine Hacking \e[0m"
@@ -113,8 +113,10 @@ echo -e "\e[92m
 sleep 1
 echo -e "\e[96mWebsite : \e[93mhttps://www.onlinehacking.in/ \e[0m"
 echo -----------------------------------------------------------------
-echo Done! NoMachine Information:
 echo ""
+printf "\e[31m[\e[32m★\e[31m]\e[92m Open NoMachine VNC Application and Software (Android/Windows). Connect this RDP. Enter IP Address ans Port and Click Connect RDP "
+echo ""
+echo -e ""
 echo -e "\e[93m IP Address:\e[97m" 
   curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' 
 echo -e "\e[96m User: \e[97m OnlineHacking"
