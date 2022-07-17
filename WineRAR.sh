@@ -1,8 +1,10 @@
 echo ""
 echo " Installing WINE "
 echo ""
-sudo apt-get install wine wine64 libwine
-sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install wine32 
+sudo apt-get install wine wine64 libwine -y
+sudo dpkg --add-architecture i386 -y
+sudo apt-get update -y
+sudo apt-get install wine32 -y
 echo ""
 echo " Checking/Creating .wine directories "
 echo ""
