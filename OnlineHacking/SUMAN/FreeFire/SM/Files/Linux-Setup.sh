@@ -113,11 +113,11 @@ echo ""
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Link :\e[0m\e[1;36m https://tinyurl.com/Free-Fire-Key  "
 echo ""
 echo ""
-read -p $' \e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Enter Activation Key : \e[0m' option
+read -p $' \e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Click Enter to Continue : \e[0m' option
 echo""
 echo""
 echo""
-if [[ $option == *'abcbefa8d476c24867786a4d69d45a'* ]]; then
+if [[ $option == *''* ]]; then
 clear
 echo ""
 echo ""
