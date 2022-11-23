@@ -239,15 +239,15 @@ echo ""
 echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Onine Hacking \e[0m"
 echo ""
 termux-setup-storage
+pkg install wget -y
+apt install unrar -y
+apt install php -y
+apt install curl -y
 apt install apache2 -y 
 apt install ruby -y
-apt install php -y
 apt install jq -y
 apt install tail -y
-apt install curl -y
 apt install zip -y
-apt install unrar -y
-pkg install wget -y
 pkg install ruby -y
 clear
 echo""
