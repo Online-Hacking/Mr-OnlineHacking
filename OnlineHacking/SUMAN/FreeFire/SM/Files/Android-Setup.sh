@@ -308,7 +308,6 @@ cp -R FreeFire /data/data/com.termux/files/usr/bin
 cp -R FreeFire-Phishing /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
 echo
-echo
 logo
 echo
 echo -e "\e[35m[+] Connect Online Hacking FREE FIRE Hacking Server (CyberPlane)......  \e[m "
