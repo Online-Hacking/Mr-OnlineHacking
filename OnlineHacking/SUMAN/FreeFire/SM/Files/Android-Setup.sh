@@ -54,14 +54,14 @@ echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Download Ngrok...\e[0m  "
                      ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.zip"
              elif [[ "$arch" == *'x86_64'* ]]; then
                     if [[ "$ArNam" == *'amd64'* ]]; then
-                                ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip"
+                                ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip"
                     else
-                                ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
+                                ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz"
                     fi
              else
-                                ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip"
+                                ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-386.tgz"
              fi
-		launch="installing server-2, size@4mb";splashdown="Installed.";echo
+		launch="installing server-2";splashdown="Installed.";echo
 		(wget --quiet $ngrok_url -O ngrok.zip)	
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok
         else
@@ -86,7 +86,7 @@ echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Download Cloudflared...\e[0m  "
              else
                                 cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
              fi
-	          launch="Installing server-1, size@25mb";splashdown="installed.";echo
+	          launch="Installing server-1";splashdown="installed.";echo
 	          (wget --quiet ${cloudd} -O cloudflared)& 
 	          
         else 
