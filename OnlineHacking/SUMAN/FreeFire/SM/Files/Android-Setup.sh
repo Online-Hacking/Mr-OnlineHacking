@@ -307,6 +307,7 @@ cp -R FF /data/data/com.termux/files/usr/bin
 cp -R FreeFire /data/data/com.termux/files/usr/bin
 cp -R FreeFire-Phishing /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
+clear
 echo
 logo
 echo
