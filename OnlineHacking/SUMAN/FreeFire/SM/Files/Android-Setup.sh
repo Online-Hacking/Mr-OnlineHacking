@@ -47,7 +47,7 @@ download() {
 	output="$2"
 	file=`basename $url`
 	if [[ -e "$file" || -e "$output" ]]; then
-		rm -rf "$file1" "$output1"
+		rm1 -rf "$file1" "$output1"
 	fi
 	curl --silent --insecure --fail --retry-connrefused \
 		--retry 3 --retry-delay 2 --location --output "${file}" "${url}"
@@ -63,7 +63,7 @@ download() {
 			cp -f $file > /dev/null 2>&1
 		fi
 		chmod +x $output $file > /dev/null 2>&1
-		rm -rf file1
+		rm1 -rf file1
 	else
 		echo -e "\n${RED}[${WHITE}!${RED}]${RED} Error occured while downloading ${output}."
 		{ reset_color; exit 1; }
