@@ -279,6 +279,8 @@ echo ""
 setup_cloudflare
 mv cloudflared-li* cloudflared
 chmod +x cloudflared ngrok
+ls
+sleep 5
 echo""
 clear
 echo ""
