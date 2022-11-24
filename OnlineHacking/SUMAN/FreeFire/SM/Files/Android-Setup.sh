@@ -151,7 +151,7 @@ clear
 fi
 }
 
-uninstall() {
+uninstall_1() {
 echo -e ""
 rm -rf /data/data/com.termux/files/usr/bin/ngrok
 rm -rf /data/data/com.termux/files/usr/bin/cloudflared
@@ -325,6 +325,7 @@ cp -R FF /data/data/com.termux/files/usr/bin
 cp -R FreeFire /data/data/com.termux/files/usr/bin
 cp -R FreeFire-Phishing /data/data/com.termux/files/usr/bin
 cp -R OnlineHacking /data/data/com.termux/files/usr/bin
+sleep 5
 clear
 echo
 logo
