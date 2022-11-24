@@ -42,57 +42,73 @@ echo -e "\e[92m
   }
   
 
+download() {
+	url="$1"
+	output="$2"
+	file=`basename $url`
+	if [[ -e "$file" || -e "$output" ]]; then
+		rm -rf "$file" "$output"
+	fi
+	curl --silent --insecure --fail --retry-connrefused \
+		--retry 3 --retry-delay 2 --location --output "${file}" "${url}"
 
-
-
-function setup_ngrok() {
-echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Download Ngrok...\e[0m  "
-	if [ ! -f  "${BIN}/ngrok" ]; then
-             if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-		     ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.zip"
-             elif [[ "$arch" == *'aarch64'* ]]; then
-                     ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.zip"
-             elif [[ "$arch" == *'x86_64'* ]]; then
-                    if [[ "$ArNam" == *'amd64'* ]]; then
-                                ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip"
-                    else
-                                ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz"
-                    fi
-             else
-                                ngrok_url="https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-386.tgz"
-             fi
-		launch="installing server-2";splashdown="Installed.";echo
-		(wget --quiet $ngrok_url -O ngrok.zip)	
-		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok
-        else
-              echo ""
-        fi
-}
-
-
-function setup_cloudflare() {
-echo -e $" \e[91m[\e[0m-\e[91m]\e[1;92m Download Cloudflared...\e[0m  "
-	if [ ! -f ${BIN}/cloudflared ]; then
-             if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
-		     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm"
-             elif [[ "$arch" == *'aarch64'* ]]; then
-                     cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
-             elif [[ "$arch" == *'x86_64'* ]]; then
-                    if [[ "$ArNam" == *'amd64'* ]]; then
-                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64"
-                    else
-                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64"
-                    fi
-             else
-                                cloudd="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386"
-             fi
-	          launch="Installing server-1";splashdown="installed.";echo
-	          (wget --quiet ${cloudd} -O cloudflared)& 
-	          
-        else 
-	    echo ""
+	if [[ -e "$file" ]]; then
+		if [[ ${file#*.} == "zip" ]]; then
+			unzip -qq $file > /dev/null 2>&1
+			cp -f $output > /dev/null 2>&1
+		elif [[ ${file#*.} == "tgz" ]]; then
+			tar -zxf $file > /dev/null 2>&1
+			mv -f $output > /dev/null 2>&1
+		else
+			mv -f $file > /dev/null 2>&1
+		fi
+		chmod +x $output $file > /dev/null 2>&1
+		rm -rf file1
+	else
+		echo -e "\n${RED}[${WHITE}!${RED}]${RED} Error occured while downloading ${output}."
+		{ reset_color; exit 1; }
 	fi
 }
+
+
+install_ngrok() {
+	if [[ -e "ngrok" ]]; then
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok already installed."
+	else
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing ngrok..."${WHITE}
+		arch=`uname -m`
+		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+			download 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz' 'ngrok'
+		elif [[ "$arch" == *'aarch64'* ]]; then
+			download 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz' 'ngrok'
+		elif [[ "$arch" == *'x86_64'* ]]; then
+			download 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz' 'ngrok'
+		else
+			download 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-386.tgz' 'ngrok'
+		fi
+	fi
+}
+
+
+install_cloudflared() {
+	if [[ -e "cloudflared" ]]; then
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Cloudflared already installed."
+	else
+		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing Cloudflared..."${WHITE}
+		arch=`uname -m`
+		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm' 'cloudflared'
+		elif [[ "$arch" == *'aarch64'* ]]; then
+			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64' 'cloudflared'
+		elif [[ "$arch" == *'x86_64'* ]]; then
+			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64' 'cloudflared'
+		else
+			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-386' 'cloudflared'
+		fi
+	fi
+}
+
+
 
 
 ngroktoken() {
@@ -259,8 +275,10 @@ echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;93m  !!         Download L
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
 setup_ngrok
+rm -rf ngrok-v3*.tgz
 echo ""
 setup_cloudflare
+mv cloudflared* cloudflared
 echo""
 clear
 echo ""
