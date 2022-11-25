@@ -75,7 +75,7 @@ install_ngrok() {
 	if [[ -e "ngrok" ]]; then
 		echo -e "\e[91m[\e[92m-\e[91m] \e[96m Ngrok already installed."
 	else
-		echo -e "\e[91m[\e[92m*\e[91m] \e[96m Installing ngrok..."
+		echo -e "\e[91m[\e[92m*\e[91m] \e[96m Installing Ngrok..."
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz' 'ngrok'
@@ -356,8 +356,10 @@ rm -rf ngrok-v3*.tgz
 echo ""
 install_cloudflared
 mv cloudflared-li* cloudflared
+echo ""
 install_localxpose
 rm -rf  loclx-linux*
+echo ""
 chmod +x loclx loclx*
 chmod +x cloudflared ngrok
 sleep 1
