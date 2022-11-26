@@ -336,6 +336,7 @@ pkg install wget -y
 apt install unrar -y
 apt install php -y
 apt install curl -y
+apt install openssh -y
 apt install apache2 -y 
 apt install ruby -y
 apt install jq -y
