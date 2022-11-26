@@ -230,8 +230,10 @@ echo ""
 clear
 }
 
-
-
+echo ""
+clear
+welcome
+clear
 echo ""
 echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The FREE FIRE MAX Phishing Tool Please Wait....  \e[0m"
 echo -e ""
