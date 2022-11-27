@@ -1,5 +1,7 @@
 #!/bin/bash
 echo ""
+#rm -rf FreeFire-Phishing
+#wget -q https://github.com/Online-Hacking/Mr-OnlineHacking/raw/main/OnlineHacking/SUMAN/FreeFire/SM/Files/Termux/FreeFire-Phishing > /dev/null
 clear
 echo ""
 
