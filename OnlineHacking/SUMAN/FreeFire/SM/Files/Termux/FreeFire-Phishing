@@ -193,7 +193,11 @@ fi
 if [[ $portfrd == "6" || $portfrd == "06" || $portfrd == "suman" ]]; then
 echo ""
 hotspot
+echo ""
+echo -e "\e[96m=======================\e[92m   SUMAN © 2022 FF  \e[96m=======================\e[92m"
+echo ""
 start_cloudflared
+echo ""
 start_ngrok
 start_loclx
 start_lhrlife
