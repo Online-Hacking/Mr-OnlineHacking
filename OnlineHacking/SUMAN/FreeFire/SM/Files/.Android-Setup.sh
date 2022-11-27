@@ -278,6 +278,7 @@ echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Onine Hacking
 echo ""
 termux-setup-storage
 pkg install wget -y
+pkg install ncurses-utils -y
 apt install unrar -y
 apt install php -y
 apt install curl -y
