@@ -172,6 +172,7 @@ fi
 uninstall() {
 echo -e ""
 rm -rf /data/data/com.termux/files/usr/bin/ngrok
+rm -rf /data/data/com.termux/files/usr/bin/loclx
 rm -rf /data/data/com.termux/files/usr/bin/cloudflared
 rm -rf /data/data/com.termux/files/usr/bin/.SUMAN/1 /data/data/com.termux/files/usr/bin/.SUMAN/2 /data/data/com.termux/files/usr/bin/.SUMAN/3 /data/data/com.termux/files/usr/bin/.SUMAN/4 /data/data/com.termux/files/usr/bin/.SUMAN/5 /data/data/com.termux/files/usr/bin/.SUMAN/6 /data/data/com.termux/files/usr/bin/.SUMAN/7 /data/data/com.termux/files/usr/bin/.SUMAN/8 /data/data/com.termux/files/usr/bin/.SUMAN/9 /data/data/com.termux/files/usr/bin/.SUMAN/0
 rm -rf /data/data/com.termux/files/usr/bin/FF
