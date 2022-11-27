@@ -280,9 +280,10 @@ sudo apt install php -y
 sudo apt install tail -y
 sudo apt install curl -y
 sudo apt install unrar -y
+sudo apt-get install unrar-free -y
 sudo apt install unzip -y
 sudo apt install ruby -y
-gem install lolcat
+sudo gem install lolcat
 sudo apt install wget -y
 sudo apt install ssh -y 
 sudo apt install jq -y
