@@ -275,7 +275,7 @@ echo -e $'\e[1;91m\e[0m\e[1;91m\e[0m\e[1;96m\e[0m\e[1;91m   --------------------
 echo ""
 echo -e "\e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Onine Hacking \e[0m"
 echo ""
-sudo apt install apache2 -y
+sudo apt autoremove -y
 sudo apt install php -y
 sudo apt install tail -y
 sudo apt install curl -y
