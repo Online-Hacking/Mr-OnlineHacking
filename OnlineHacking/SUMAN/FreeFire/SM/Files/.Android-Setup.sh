@@ -162,7 +162,7 @@ echo ""
 echo -e "\e[31m[\e[32m*\e[31m]\e[33m Sign up & get ngrok authtoken \e[m "
 echo ""
 read -p $'\e[31m[\e[32m*\e[31m]\e[33m Input AuthToken Only \e[91m[Ex. \e[92m2cEG2LcBt**********WK5Ntc \e[92m] : \e[0m' token
-ngrok config add-authtoken $token
+./ngrok config add-authtoken $token
 echo ""
 fi
 if [[ $option == *'n'* ]]; then
