@@ -27,7 +27,7 @@ read -p $' \e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Click Enter to Continue : \e[0m' 
 echo""
 echo""
 echo""
-if [[ $option == *''* ]]; then
+if [[ $option == *'9064'* ]]; then
 clear
 echo ""
 echo ""
