@@ -1,4 +1,6 @@
 echo ""
+sudo apt install wget -y
+clear
 echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing Free Cloud Desktop Please Wait....  \e[0m"
 echo -e ""
 echo ""
@@ -30,7 +32,6 @@ clear
 echo ""
 echo ""
 cd RDP
-sudo apt install wget -y
 wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.Debian-Linux-ChomeDesktop.sh > /dev/null 2>&1
 wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.ubuntu-desktop-lxde-vnc.sh > /dev/null 2>&1
 wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.kali-linux.sh > /dev/null 2>&1
