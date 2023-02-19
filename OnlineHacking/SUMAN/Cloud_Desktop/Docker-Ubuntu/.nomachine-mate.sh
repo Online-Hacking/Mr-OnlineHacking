@@ -111,7 +111,7 @@ echo -e "\e[92m
      ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝  \e[95;1m \e[0m\n"
   echo""
 sleep 1
-echo -e "\e[96mWebsite : \e[93mhttps://www.onlinehacking.in/ \e[0m"
+echo -e "\e[96mWebsite : \e[93mhttps://www.onlinehacking.org/ \e[0m"
 echo -----------------------------------------------------------------
 echo ""
 printf "\e[31m[\e[32m★\e[31m]\e[92m Open NoMachine VNC Application and Software (Android/Windows). Connect this RDP. Enter IP Address ans Port and Click Connect RDP "
