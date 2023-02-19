@@ -6,7 +6,7 @@ clear
 echo ""
 echo "Download windows files"
 echo ""
-wget -O w7x64.img https://bit.ly/akuhnetw7X64
+
 echo ""
 clear
 wget -O ng.sh https://github.com/OnlineHacKing/Cloud_Linux_RDP/raw/main/ngrok.sh > /dev/null 2>&1
