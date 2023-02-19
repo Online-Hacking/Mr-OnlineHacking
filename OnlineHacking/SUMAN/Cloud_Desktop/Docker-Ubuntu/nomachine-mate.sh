@@ -121,5 +121,6 @@ echo -e "\e[93m IP Address:\e[97m"
 echo -e "\e[96m User: \e[97m OnlineHacking"
 echo -e "\e[92m Password: \e[97m suman"
 echo -----------------------------------------------------------------
+rm -rf Docker-Ubuntu/nomachine-mate.sh
 echo "VM can't connect? Restart Cloud Shell then Re-run script."
 seq 1 43200 | while read i; do echo -en "\r Running .     $i s /43200 s";sleep 0.1;echo -en "\r Running ..    $i s /43200 s";sleep 0.1;echo -en "\r Running ...   $i s /43200 s";sleep 0.1;echo -en "\r Running ....  $i s /43200 s";sleep 0.1;echo -en "\r Running ..... $i s /43200 s";sleep 0.1;echo -en "\r Running     . $i s /43200 s";sleep 0.1;echo -en "\r Running  .... $i s /43200 s";sleep 0.1;echo -en "\r Running   ... $i s /43200 s";sleep 0.1;echo -en "\r Running    .. $i s /43200 s";sleep 0.1;echo -en "\r Running     . $i s /43200 s";sleep 0.1; done
