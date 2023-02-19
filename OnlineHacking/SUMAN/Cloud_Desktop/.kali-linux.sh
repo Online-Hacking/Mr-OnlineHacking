@@ -51,7 +51,7 @@ echo ""
 clear
 echo ""
 echo ""
-echo -e " \e[36mWebsite : \e[0m\e[92mwww.onlinehacking.in  \e[93m/  \e[92mwww.onlinehacking.xyz  \e[0m\n"
+echo -e " \e[36mWebsite : \e[0m\e[92mwww.onlinehacking.in  \e[93m/  \e[92mwww.onlinehacking.org  \e[0m\n"
 echo ""
 echo -e " \e[97mTelegram : \e[0m\e[93mhttps://t.me/OnlineHacKing \e[0m\n"
 echo ""
@@ -104,7 +104,7 @@ echo -e "\e[92m
      ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝  \e[95;1m \e[0m\n"
   echo""
 sleep 1
-echo -e "\e[96mWebsite : \e[93mhttps://www.onlinehacking.in/ \e[0m"
+echo -e "\e[96mWebsite : \e[93mhttps://www.termux.xyz/ \e[0m"
 echo ""
 echo -----------------------------------------------------------------
 echo ""
@@ -121,3 +121,4 @@ echo "Wait 2 minute to finish the setup then Run using RDP Address"
 echo "===================================="
 echo "===================================="
 docker run --rm -p 3388:3389 danielguerra/ubuntu-xrdp:kali 
+
