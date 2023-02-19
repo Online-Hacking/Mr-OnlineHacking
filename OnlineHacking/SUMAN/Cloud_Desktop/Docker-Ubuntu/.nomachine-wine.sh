@@ -60,7 +60,7 @@ echo ""
 clear
 echo ""
 echo ""
-echo -e " \e[36mWebsite : \e[0m\e[92mwww.onlinehacking.in  \e[93m/  \e[92mwww.onlinehacking.xyz  \e[0m\n"
+echo -e " \e[36mWebsite : \e[0m\e[92mwww.onlinehacking.in  \e[93m/  \e[92mwww.onlinehacking.org  \e[0m\n"
 echo ""
 echo -e " \e[97mTelegram : \e[0m\e[93mhttps://t.me/OnlineHacKing \e[0m\n"
 echo ""
@@ -111,7 +111,7 @@ echo -e "\e[92m
      ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝  \e[95;1m \e[0m\n"
   echo""
 sleep 1
-echo -e "\e[96mWebsite : \e[93mhttps://www.onlinehacking.in/ \e[0m"
+echo -e "\e[96mWebsite : \e[93mhttps://www.onlinehacking.org/ \e[0m"
 echo -----------------------------------------------------------------
 echo ""
 printf "\e[31m[\e[32m★\e[31m]\e[92m Open NoMachine VNC Application and Software (Android/Windows). Connect this RDP. Enter IP Address ans Port and Click Connect RDP "
@@ -121,5 +121,6 @@ echo -e "\e[93m IP Address:\e[97m"
 echo -e "\e[96m User: \e[97m OnlineHacking"
 echo -e "\e[92m Password: \e[97m suman"
 echo -----------------------------------------------------------------
+rm -rf Docker-Ubuntu/nomachine-wine.sh
 echo "VM can't connect? Restart Cloud Shell then Re-run script."
 seq 1 43200 | while read i; do echo -en "\r Running .     $i s /43200 s";sleep 0.1;echo -en "\r Running ..    $i s /43200 s";sleep 0.1;echo -en "\r Running ...   $i s /43200 s";sleep 0.1;echo -en "\r Running ....  $i s /43200 s";sleep 0.1;echo -en "\r Running ..... $i s /43200 s";sleep 0.1;echo -en "\r Running     . $i s /43200 s";sleep 0.1;echo -en "\r Running  .... $i s /43200 s";sleep 0.1;echo -en "\r Running   ... $i s /43200 s";sleep 0.1;echo -en "\r Running    .. $i s /43200 s";sleep 0.1;echo -en "\r Running     . $i s /43200 s";sleep 0.1; done
