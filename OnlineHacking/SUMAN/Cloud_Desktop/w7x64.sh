@@ -1,3 +1,5 @@
+#!/bin/bash
+echo ""
 echo ""
 printf "\e[100;330m[\e[10m **** ]\e[1;40m\e[10m OnlineHacking :\e[1;32m Join Telegram Channel \e[1;33m @OnlineHacking  !\e[0m"
 sleep 4
@@ -14,17 +16,6 @@ chmod +x ng.sh
 ./ng.sh
 
 
-function goto
-{
-    label=$1
-    cd 
-    cmd=$(sed -n "/^:[[:blank:]][[:blank:]]*${label}/{:a;n;p;ba};" $0 | 
-          grep -v ':$')
-    eval "$cmd"
-    exit
-}
-
-: ngrok
 clear
 echo ""
 echo -e "\e[92m 
