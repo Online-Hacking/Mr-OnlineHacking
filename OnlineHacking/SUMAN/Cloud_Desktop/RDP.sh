@@ -18,12 +18,12 @@ echo -e "\e[93m
 ╚═╝  ╚═╝╚══════╝   ╚═╝    \e[0m\n"
 echo ""
 echo ""
-echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Visit This Website Scroll Down and Generator License Key (Free) \e[0m"
+echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m Visit This Link and Generator License Key (Free) \e[0m"
 echo ""
-echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Link :\e[0m\e[1;36m http://tinyurl.com/RDP-Linux-Key  "
+echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Link :\e[0m\e[1;36m https://www.onlinehacking.org/cloud-linux-rdp-key/  "
 echo ""
 echo ""
-read -p $' \e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Click Enter to Continue : \e[0m' option
+read -p $' \e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Enter License Key : \e[0m' option
 echo""
 echo""
 echo""
