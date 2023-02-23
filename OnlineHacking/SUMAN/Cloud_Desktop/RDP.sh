@@ -1,5 +1,4 @@
 echo ""
-sudo apt install wget -y
 clear
 echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m Installing Free Cloud Desktop Please Wait....  \e[0m"
 echo -e ""
@@ -30,6 +29,7 @@ echo""
 if [[ $option == *'9064'* ]]; then
 clear
 echo ""
+sudo apt install wget -y
 echo ""
 cd RDP
 wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.Debian-Linux-ChomeDesktop.sh > /dev/null 2>&1
@@ -46,6 +46,17 @@ cd ..
 echo ""
 clear
 echo
+fi
+
+if [[ $option == * ]]; then
+clear
+echo -e ""
+echo -e ""
+echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Errer :\e[0m\e[1;36m Enter Valid Licence Key  "
+echo -e ""
+echo -e ""
+echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m You geve the wrong licence key | \e[96m Run Tool Again \e[0m"
+exit
 fi
 sleep 1
 echo
