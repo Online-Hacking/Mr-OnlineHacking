@@ -48,7 +48,7 @@ clear
 echo
 fi
 
-if [[ $option == '*' ]]; then
+if [[ $option == *''* ]]; then
 clear
 echo -e ""
 echo -e ""
