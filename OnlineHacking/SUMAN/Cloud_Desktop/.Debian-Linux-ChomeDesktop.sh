@@ -19,6 +19,10 @@
 	                            sudo apt install firefox-esr -y
 	                            sudo apt-get install geany -y
 	                            sudo apt-get install vim-gtk3 -y
+			   sudo apt install xfce4 xfce4-goodies xrdp -y
+			   sudo apt install -y tightvncserver -y
+			   sudo apt install firefox-esr -y
+			            sudo apt-get install --assume-yes ./chrome-remote-desktop_current_amd64.deb
          echo ""
 	 clear
 	 bash RDP/LOGO/suman.sh
