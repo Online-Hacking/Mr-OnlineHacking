@@ -55,8 +55,7 @@ echo -e ""
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Error :\e[0m\e[1;36m Enter Valid Licence Key  "
 echo -e ""
 echo -e ""
-echo -e " \e[1;33m[\e[0m\e[1;77m~\e[0m\e[1;33m]\e[0m\e[1;32m \e[95m You geve the wrong licence key | \e[96m Run Tool Again \e[0m"
-sleep 5
+sleep 1
 exit
 fi
 sleep 1
