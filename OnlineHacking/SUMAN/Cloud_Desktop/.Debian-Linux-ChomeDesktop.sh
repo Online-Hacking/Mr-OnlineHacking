@@ -5,7 +5,7 @@
 	 echo -e
 	 echo -e
 	    sudo wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-	    sudo apt update
+	    sudo apt update -y
 	    sudo apt-get install --assume-yes ./chrome-remote-desktop_current_amd64.deb
 
          echo ""
@@ -20,7 +20,7 @@
 	                            sudo apt-get install geany -y
 	                            sudo apt-get install vim-gtk3 -y
 			   sudo apt install xfce4 xfce4-goodies xrdp -y
-			   sudo apt install -y tightvncserver -y
+			   sudo apt install tightvncserver -y
 			   sudo apt install firefox-esr -y
 			            sudo apt-get install --assume-yes ./chrome-remote-desktop_current_amd64.deb
          echo ""
