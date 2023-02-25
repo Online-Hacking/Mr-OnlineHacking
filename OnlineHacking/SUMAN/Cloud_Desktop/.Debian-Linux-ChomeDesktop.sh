@@ -4,10 +4,10 @@
          echo ""
 	 echo -e
 	 echo -e
-			   sudo apt update -y 
-			   sudo apt install xfce4 xfce4-goodies xrdp -y
-			   sudo apt install -y tightvncserver -y
-			   sudo apt install firefox-esr -y
+	    sudo wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+	    sudo apt update
+	    sudo apt-get install --assume-yes ./chrome-remote-desktop_current_amd64.deb
+
          echo ""
 	 echo -e
 			   printf "\e[1;31m[\e[0m\e[1;92mSUMAN\e[0m\e[1;31m] \e[0m\e[1;37;41m Setup Server \e[0m   "  
@@ -15,8 +15,10 @@
 			   echo -e
 			   echo ""
 			   echo ""
-			   sudo wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-			   sudo apt-get install --assume-yes ./chrome-remote-desktop_current_amd64.deb
+	                            sudo apt install xfce4-terminal -y
+	                            sudo apt install firefox-esr -y
+	                            sudo apt-get install geany -y
+	                            sudo apt-get install vim-gtk3 -y
          echo ""
 	 clear
 	 bash RDP/LOGO/suman.sh
@@ -34,5 +36,5 @@
 			   echo -e
 			   echo -e "\e[96m=====================================================================\e[92m"
                            echo ""
-			   rm -rf RDP/Debian-Linux-ChomeDesktop.sh
+			   rm -rf RDP/.Debian-Linux-ChomeDesktop.sh
          echo ""
