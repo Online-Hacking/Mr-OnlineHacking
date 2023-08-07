@@ -1,0 +1,5 @@
+#!/bin/bash
+echo ""
+docker pull cristeab/ubuntu_autodialer
+echo ""
+docker run -d -p 8000:8000 cristeab/ubuntu_autodialer /start_autodialer.sh
