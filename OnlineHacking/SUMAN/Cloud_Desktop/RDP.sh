@@ -26,7 +26,7 @@ read -p $' \e[1;40m\e[31m[\e[32m*\e[31m]\e[32m Enter License Key : \e[0m' option
 echo""
 echo""
 echo""
-if [[ $option == *''* ]]; then
+#!/bin/bash if [[ $option == *''* ]]; then
 clear
 echo ""
 sudo apt install wget -y
