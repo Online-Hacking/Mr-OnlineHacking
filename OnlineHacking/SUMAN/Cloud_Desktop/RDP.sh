@@ -55,7 +55,7 @@ echo -e ""
 echo -e " \e[91m[\e[92m*\e[91m]\e[1;93m Error :\e[0m\e[1;36m Enter Valid Licence Key  "
 echo -e ""
 echo -e ""
-sleep 1
+sleep 10
 exit
 fi
 sleep 1
