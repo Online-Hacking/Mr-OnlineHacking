@@ -30,6 +30,7 @@ echo""
 clear
 echo ""
 sudo apt install wget -y
+rm -rf Docker-Ubuntu/.nomachine*
 echo ""
 cd RDP
 wget -q https://raw.githubusercontent.com/Online-Hacking/Mr-OnlineHacking/main/OnlineHacking/SUMAN/Cloud_Desktop/.Debian-Linux-ChomeDesktop.sh > /dev/null 2>&1
